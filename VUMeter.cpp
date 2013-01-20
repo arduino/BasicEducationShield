@@ -8,12 +8,12 @@
 
 VUMeter::VUMeter(){
 	//default pins
-	//be 5 pins, 9~13
-	pins[0]=9;
-	pins[1]=10;
-	pins[2]=11;
-	pins[3]=12;
-	pins[4]=13;
+	//be 5 pins, 2~6
+	pins[0]=2;
+	pins[1]=3;
+	pins[2]=4;
+	pins[3]=5;
+	pins[4]=6;
 	for(int i=5;i<LED_LENGTH;i++){
 		this->pins[i]=-1;
 	}

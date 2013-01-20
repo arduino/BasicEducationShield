@@ -10,6 +10,7 @@ Button::Button(int pin,bool pressedValue){
 	this->pressedValue=pressedValue;
 }
 void Button::initialize(){
+	//Must be called in setup
 	pinMode(pin,INPUT);
 }
 bool Button::pressed(int timeout){
@@ -31,15 +32,15 @@ bool Button::doublePressed(int timeout,int tolerance){
 bool Button::checkPress(int timeout,bool requiredState){
 	//help function, check if the button has changed 
 	//from not "requiredState" to "requiredState" within timeout
-	int timer=millis();
+	long timer=millis();
 	bool iStart=false;
 	do{
 		if(!iStart){
-			if(digitalRead(pin)!=requiredState){
+			if(getState()!=requiredState){
 				iStart=true;
 			}
 		}else{
-			if(digitalRead(pin)==requiredState){
+			if(getState()==requiredState){
 				return true;
 			}
 		}
@@ -47,4 +48,8 @@ bool Button::checkPress(int timeout,bool requiredState){
 	}while(millis()-timer<=timeout || !timeout );
 	
 	return false;
+}
+
+bool Button::getState(){
+	return digitalRead(pin);
 }
