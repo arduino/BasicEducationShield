@@ -44,7 +44,7 @@ bool Button::checkPress(int timeout,bool requiredState){
 				return true;
 			}
 		}
-		delay(10);
+		//delay(10);
 	}while(millis()-timer<=timeout || !timeout );
 	
 	return false;
