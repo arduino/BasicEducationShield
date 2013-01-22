@@ -48,22 +48,24 @@ void loop(){
  int winner=getWinner();
 
  //The yellow led by side of the winner will light up
- if(winner==1)
+ if(winner==1){
    lights.on(YELLOW_LED_1);
- else
+ }else{
    lights.on(YELLOW_LED_2);
+ }
  delay(5000);
  
 }
 
 //The function below waits for either of the tilter 
-//switch to be activated. The first one to activate
+//switch to be swang. The first one to swing
 //will be returned by its number
 int getWinner(){
   do{
-    if(player_1.pressed(1))
+    if(player_1.pressed(1)){
       return 1;
-    else if(player_2.pressed(1))
+    }else if(player_2.pressed(1)){
       return 2;
+    }
   }while(true);
 }
