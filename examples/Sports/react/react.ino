@@ -29,7 +29,8 @@ void setup(){
   
 }
 
-void loop(){
+void loop(){    
+  delay(random(50, 2000));
   touch = random(0, 3);
   LEDs.on(touch);
   
@@ -40,8 +41,6 @@ void loop(){
     int noteDurations[] = { 8, 8};
     int numberOfNotes = 2;
     piezo.play(numberOfNotes, melody, noteDurations, 1);
-    
-    delay(random(50, 2000));
   }
   else{
     gameOver();
@@ -58,5 +57,4 @@ void gameOver(){
   
   LEDs.blinkAll(100, 10);
   LEDs.fill(0);
-  delay(random(50, 2000));
 }
