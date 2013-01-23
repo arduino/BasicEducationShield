@@ -28,9 +28,9 @@ void setup(){
   lights.config(pinCount,ledPins);
 
   //Initializing components
-  lights.initialize();
-  player_1.initialize();
-  player_2.initialize();
+  lights.begin();
+  player_1.begin();
+  player_2.begin();
 
   //We need this for generating random number later
   randomSeed(analogRead(0));
