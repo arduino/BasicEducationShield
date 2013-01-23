@@ -29,9 +29,9 @@ void setup(){
   //if your are using other pins than 2 to 6 you need to configure that here
   vuMeter.config(pinCount, ledPins); 
   
-  vuMeter.initialize(); //does the same as pinMode, LEDs are outputs
-  button1.initialize(); //does the same as pinMode, buttons are inputs
-  button2.initialize(); //does the same as pinMode, buttons are inputs
+  vuMeter.begin(); //does the same as pinMode, LEDs are outputs
+  button1.begin(); //does the same as pinMode, buttons are inputs
+  button2.begin(); //does the same as pinMode, buttons are inputs
   
   vuMeter.scrollLeft(ledTime, 1); //The game starts by scrolling the LEDs to the left
 }
