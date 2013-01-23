@@ -9,7 +9,7 @@ Button::Button(int pin,bool pressedValue){
 	this->pin=pin;
 	this->pressedValue=pressedValue;
 }
-void Button::initialize(){
+void Button::begin(){
 	//Must be called in setup
 	pinMode(pin,INPUT);
 }
