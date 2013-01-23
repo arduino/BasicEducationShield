@@ -1,6 +1,9 @@
 /*
-Description
+Basketball
 
+In this game you get to practise your ball shooting accuracy. An
+LDR (light dependant resistor) will count your score and a row of
+LEDs will display the score for you.
 */
 
 
