@@ -30,7 +30,7 @@ void VUMeter::config(int length, int pins[]){
 	}
 	this->pinCount=length;
 }
-void VUMeter::initialize(){
+void VUMeter::begin(){
 	//Must be called before starting
 	//set all the attached pins as OUTPUT
 	for(int i=0;i<pinCount;i++){
