@@ -1,3 +1,10 @@
+/*
+Fencing
+
+Two players hold their tilt switch swords and wait for the
+signal light to turn green (there’s a random waiting time).
+When it does turn green, the first to swing the sword wins.
+*/
 #include <Castilla.h>
 
 //Position of the leds in VU-meter is represented
