@@ -5,7 +5,7 @@ Button me=Button(7,HIGH);
 void setup(){
   Serial.begin(9600);
   delay(1000);
-  me.initialize();
+  me.begin();
 }
 void loop(){
   Serial.println("Please press...");
