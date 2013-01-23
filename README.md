@@ -15,7 +15,6 @@ The team creating this collection of exercises is made by:
 - X. Yang (IxD Manager)
 - C. Leivas (IxD Junior Designer)
 - T. Hansson (IxD Junior Designer)
-- L. Shkirando (IxD Intern)
 - L. Balboa (Art Direction)
 - K. Engdahl (3D Modelling Intern)
 - T. Pham (Typesetting and English Language Supervison)
