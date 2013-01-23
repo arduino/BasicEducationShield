@@ -35,7 +35,7 @@ void setup(){
   
   //Connect scoreboard
   scoreBoard.config(pinCount,ledPins);
-  scoreBoard.initialize();
+  scoreBoard.begin();
   
   //initialize left and right foot
   leftFoot.config(capacitiveSensorThreshold);
