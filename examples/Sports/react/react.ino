@@ -2,41 +2,51 @@
 #include <Castilla.h>
 #include "pitches.h"
 
-int ledPins[] = {11, 12, 13};  
+//Define the 3 LEDs
+int ledPins[] = {2, 3, 4};  
 int pinCount = 3;
 VUMeter LEDs;
 
-CapacitiveSwitch foil[3];
+//There're 3 pads for pressing
+CapacitiveSwitch pad[3];
 
+//You have 500 milliseconds to press the pad
 int reactTime = 500;
-int touch = 0;
 
-Melody piezo = Melody(8); // the piezo connected to digital pin 8
+// the piezo connected to digital pin 8
+Melody piezo = Melody(8); 
 
 
 
 void setup(){
-  //if your are using other pins than 2 to 6 you need to configure that here
   LEDs.config(pinCount, ledPins); 
-  LEDs.initialize();
+  LEDs.begin();
   Serial.begin(9600);
-  foil[0] = CapacitiveSwitch(5,4);
-  foil[1] = CapacitiveSwitch(5,3);
-  foil[2] = CapacitiveSwitch(5,2);
-  foil[0].config(900);
-  foil[1].config(900);
-  foil[2].config(900);
+  
+  //Configure the pads
+  pad[0] = CapacitiveSwitch(13,12);
+  pad[1] = CapacitiveSwitch(13,11);
+  pad[2] = CapacitiveSwitch(13,10);
+  pad[0].config(900);
+  pad[1].config(900);
+  pad[2].config(900);
   
 }
 
 void loop(){    
+  //Wait for a random time before each turn begins
   delay(random(50, 2000));
-  touch = random(0, 3);
-  LEDs.on(touch);
   
-  if(foil[touch].pressed(reactTime)){
-    LEDs.off(touch);
+  //pick a target between the 3 pads
+  int target = random(0, 3);
+  //Light up the LED
+  LEDs.on(target);
+  
+  //If the pad corresponding to the LED is pressed
+  if(pad[target].pressed(reactTime)){
+    LEDs.off(target);
     
+	//Play the winning sound
     int melody[] = { NOTE_GS4, NOTE_C5};
     int noteDurations[] = { 8, 8};
     int numberOfNotes = 2;

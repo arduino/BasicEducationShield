@@ -4,7 +4,7 @@ VUMeter me;
 
 void setup(){
   Serial.begin(9600);
-  int pins[]={9,10,11,12,13};
+  int pins[]={2,3,4,5,6};
   me.config(5,pins);
   me.begin();
 //  me.test();
@@ -16,5 +16,5 @@ void loop(){
   //me.fillFrom(2,3);
   //me.blink(2,100,10);
   //me.blinkAll(100,10);
-  me.fill(3);
+  me.fill(5);
 }

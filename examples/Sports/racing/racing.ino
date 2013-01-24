@@ -21,8 +21,8 @@ VUMeter scoreBoard;
 
 //Configure the capacitive sensors
 int capacitiveSensorThreshold=900;
-CapacitiveSwitch leftFoot=CapacitiveSwitch(4,3);
-CapacitiveSwitch rightFoot=CapacitiveSwitch(4,2);
+CapacitiveSwitch leftFoot=CapacitiveSwitch(13,12);
+CapacitiveSwitch rightFoot=CapacitiveSwitch(13,11);
 
 int score;
 boolean win;
@@ -53,10 +53,10 @@ void loop(){
     win=true;
   }
   //Every 20 points light up a led
-  scoreBoard.fill(score/20);
+  scoreBoard.fill(score/5);
   //if you win, blink all leds for celebration
   if(win){
-    scoreBoard.blinkAll(100,4);
+    scoreBoard.blinkAll(25,4);
     //and reset the game
     win=false;
     score=0;

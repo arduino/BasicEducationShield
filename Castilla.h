@@ -98,7 +98,7 @@ class TiltSwitch : public Button{
 
 class CapacitiveSwitch : public Button{
 	public:
-		CapacitiveSwitch(int pin_in=4, int pin=3);
+		CapacitiveSwitch(int pin_in=13, int pin=12);
 		void config(int threashold);
 		void test();
 		long getValue();
