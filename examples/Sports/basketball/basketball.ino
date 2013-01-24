@@ -1,6 +1,9 @@
 /*
-Description
+Basketball
 
+In this game you get to practise your ball shooting accuracy. An
+LDR (light dependant resistor) will count your score and a row of
+LEDs will display the score for you.
 */
 
 
@@ -22,7 +25,7 @@ int score = 0;
 void setup(){
   //if your are using other pins than 2 to 6 you need to configure that here
   vuMeter.config(pinCount, ledPins); 
-  vuMeter.initialize(); //does the same as pinMode, LEDs are outputs
+  vuMeter.begin(); //does the same as pinMode, LEDs are outputs
   
   ldr.config(837, 600); //first run LDRtest example to see what values you need to put here
   

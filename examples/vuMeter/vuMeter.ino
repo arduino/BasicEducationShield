@@ -6,7 +6,7 @@ void setup(){
   Serial.begin(9600);
   int pins[]={9,10,11,12,13};
   me.config(5,pins);
-  me.initialize();
+  me.begin();
 //  me.test();
   //me.scrollLeft(500);
 }

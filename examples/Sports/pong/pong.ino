@@ -1,8 +1,13 @@
 /*
-Description
+Pong
 
+This is a small pong game consisting of a row of 5 LEDs(VU-meter)
+and one button on each side of the row. Play it with a friend, both
+of you should have a button in hand. When the game starts, the 
+“pong” will fly towards you. Press your button to hit the pong when
+it reaches the end, so it bounces to your friend. If either of you
+fail to hit “pong” in time, the other player will be the winner. 
 */
-
 
 #include <Castilla.h>
 /*
@@ -14,8 +19,8 @@ int ledPins[] = {2, 3, 4, 5, 6};
 int pinCount = 5;
 VUMeter vuMeter; 
 
-Button button1 = Button(9, HIGH); //the button connected to digital pin 9
-Button button2 = Button(10, HIGH); //the button connected to digital pin 10
+Button button1 = Button(9); //the button connected to digital pin 9
+Button button2 = Button(10); //the button connected to digital pin 10
 
 int ledTime = 100; //determines how fast the LEDs will switch
 int pressTime = 200; //determines how long time a player has to press the button
@@ -24,9 +29,9 @@ void setup(){
   //if your are using other pins than 2 to 6 you need to configure that here
   vuMeter.config(pinCount, ledPins); 
   
-  vuMeter.initialize(); //does the same as pinMode, LEDs are outputs
-  button1.initialize(); //does the same as pinMode, buttons are inputs
-  button2.initialize(); //does the same as pinMode, buttons are inputs
+  vuMeter.begin(); //does the same as pinMode, LEDs are outputs
+  button1.begin(); //does the same as pinMode, buttons are inputs
+  button2.begin(); //does the same as pinMode, buttons are inputs
   
   vuMeter.scrollLeft(ledTime, 1); //The game starts by scrolling the LEDs to the left
 }
