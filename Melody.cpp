@@ -21,16 +21,24 @@ void Melody::play(int length, int notes[],int duration[],float speed){
 	//speed is a float bigger than 1. The bigger it is, the slower 
 	//sound it makes.
 	for(int i=0;i<length && notes[i]!=-1 ;i++){
-		//Serial.print(notes[i]);
-		//Serial.print("\t");
-		//Serial.println(duration[i]);
-		
 		tone(pin,notes[i],1000/duration[i]);
 		int pauseBetweenNotes = 1000/duration[i]*speed;
 		delay(pauseBetweenNotes);
 		noTone(8);
 	}
 }
+void Melody::beep(int length){
+	//Make a beep sound
+	int notes[]={20};
+	int duration[]={1000/length};
+	play(1,notes,duration,1);
+}
+void Melody::playTone(int note,int length){
+	//Play a certain tone. Much more flexible than defined notes.
+	tone(pin,note,length+5);
+	delay(length);
+}
+
 /*
 void Melody::setMelody(int length, int notes[],int duration[]){
 	this->length=length;

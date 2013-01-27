@@ -7,7 +7,7 @@
 #include "WProgram.h"
 #endif
 
-#include "./CapacitiveSensor/CapacitiveSensor.h"
+#include "../CapacitiveSensor/CapacitiveSensor.h"
 
 
 #define LED_LENGTH 20
@@ -43,6 +43,8 @@ class Melody{
 		/*
 		void setMelody(int lendgth, int notes[],int duration[]);*/
 		void play(int length, int notes[],int diration[], float speed=1.3);
+		void beep(int length=30);
+		void playTone(int note, int length=10);
 		/*
 		void setNote(int index,int note);
 		int getNote(int index);
@@ -101,10 +103,35 @@ class CapacitiveSwitch : public Button{
 		CapacitiveSwitch(int pin_in=13, int pin=12);
 		void config(int threashold);
 		void test();
-		long getValue();
+		long getValue(int min=0);
 	protected:
 		CapacitiveSensor sensor;
 		int threashold;
 		virtual bool getState();
+};
+
+class LED{
+	//Mostly for the LED component in Tinkerkit
+	public:
+		LED(int pin=9);
+		void config();
+		void begin();
+		void on();
+		void off();
+		void blink(int speed,int times=1);
+	private:
+		int pin;
+};
+
+class PiezoKnockSensor{
+	public:
+		PiezoKnockSensor(int pin=A0);
+		void config(int threshold=40,int debounceTime=80);
+		bool knocked(int timeout=0);
+		void test();
+	private:
+		int pin;
+		int threshold;
+		long debounceTime;
 };
 #endif
