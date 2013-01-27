@@ -1,3 +1,12 @@
+/*
+React
+In this game your reaction skills are tested. 
+The game consists of 3 LEDs and 3 capacitive 
+sensors. When one LED lights up, you need to 
+touch the belonging capacitive sensor as fast 
+as you can. If you fail, it’s game over.
+*/
+
 #include <CapacitiveSensor.h>
 #include <Castilla.h>
 #include "pitches.h"
