@@ -30,7 +30,7 @@ void loop(){
   Serial.println(me.pressed());
   
   
-  Serial.println("Please press...");
+  Serial.println("Please release...");
   //released(timeout)
   //	timeout: same as in pressed(timeout).
   //
