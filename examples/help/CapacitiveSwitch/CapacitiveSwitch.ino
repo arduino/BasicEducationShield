@@ -45,7 +45,7 @@ void loop(){
   
   delay(1000);
   
-  Serial.println("Please press...");
+  Serial.println("Please release...");
   //released(timeout)
   //	timeout: same as in pressed(timeout).
   //
