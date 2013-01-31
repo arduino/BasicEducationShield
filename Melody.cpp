@@ -27,9 +27,9 @@ void Melody::play(int length, int notes[],int duration[],float speed){
 		noTone(8);
 	}
 }
-void Melody::beep(int length){
+void Melody::beep(int note, int length){
 	//Make a beep sound
-	int notes[]={20};
+	int notes[]={note};
 	int duration[]={1000/length};
 	play(1,notes,duration,1);
 }

@@ -43,7 +43,7 @@ class Melody{
 		/*
 		void setMelody(int lendgth, int notes[],int duration[]);*/
 		void play(int length, int notes[],int diration[], float speed=1.3);
-		void beep(int length=30);
+		void beep(int note=20, int length=30);
 		void playTone(int note, int length=10);
 		/*
 		void setNote(int index,int note);

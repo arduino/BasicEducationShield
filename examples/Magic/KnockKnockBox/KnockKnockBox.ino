@@ -77,7 +77,8 @@ void playback(){
   //Play the knock pattern back to you through the
   //speaker piezo
   for(int i=0;timer[i]!=0;i++){
-    speaker.beep();
+    //Make a beep sound with tone of 20
+    speaker.beep(20);
     if(timer[i+1]){
       delay(timer[i+1]-timer[i]);
     }
