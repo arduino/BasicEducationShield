@@ -8,6 +8,7 @@
 #endif
 
 #include "../CapacitiveSensor/CapacitiveSensor.h"
+#include "../Servo/Servo.h"
 
 
 #define LED_LENGTH 20
@@ -26,7 +27,7 @@ class VUMeter{
 		void blink(int index, int speed, int times=1);
 		void blinkAll(int speed,int times=1);
 		void clear();
-		
+
 		void test();
 	private:
 		void blinkOnce(int index,int onTime,int offTime);
@@ -57,7 +58,7 @@ class Melody{
 		int notes[LENGTH];
 		int duration[LENGTH];
 		*/
-		
+
 };
 
 class Button{
@@ -70,7 +71,7 @@ class Button{
 	protected:
 		int pin;
 		bool pressedValue;
-		
+
 		virtual bool getState();
 		bool checkPress(int timeout, bool requiredState);
 
@@ -81,15 +82,15 @@ class LDR : public Button{
 		LDR(int pin=A1);
 		void config(int baseValue,int threashold);
 		void test();
-		
+
 		//bool pressed(int timeout=0);
 		//bool released(int timeout=0);
 		//bool doublePressed(int timeout=0,int tolerance=500);
-		
+
 	protected:
 		int base;
 		int threashold;
-		
+
 		virtual bool getState();
 };
 
@@ -133,5 +134,17 @@ class PiezoKnockSensor{
 		int pin;
 		int threshold;
 		long debounceTime;
+};
+
+class Robot{
+    public:
+        Robot(int pin=9);
+        void begin();
+        void goForward();
+        void goBackwards();
+        void standStill();
+    private:
+        int pin;
+        Servo servo;
 };
 #endif
