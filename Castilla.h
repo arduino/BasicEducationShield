@@ -136,15 +136,18 @@ class PiezoKnockSensor{
 		long debounceTime;
 };
 
-class Robot{
+class ContinuousServo{
     public:
-        Robot(int pin=9);
+        ContinuousServo(int pin=9);
         void begin();
-        void goForward();
-        void goBackwards();
-        void standStill();
+        void goForward(int speed=180);
+        void goBackwards(int speed=0);
+        void standStill(int speed=97);
+        void setSpeed(int speed);
+
     private:
         int pin;
+        int speed;
         Servo servo;
 };
 #endif
