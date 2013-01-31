@@ -150,4 +150,14 @@ class ContinuousServo{
         int speed;
         Servo servo;
 };
+
+class LimitedServo{
+    public:
+        LimitedServo(int pin=9);
+        void begin();
+        void setAngle(int angle=90);
+    private:
+        int pin;
+        Servo servo;
+    };
 #endif
