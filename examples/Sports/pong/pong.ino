@@ -24,6 +24,7 @@ Button button2 = Button(10); //the button connected to digital pin 10
 
 int ledTime = 100; //determines how fast the LEDs will switch
 int pressTime = 200; //determines how long time a player has to press the button
+int buttonNotPressed = 0; //this keep track on who missed to press the button
 
 void setup(){
   //if your are using other pins than 2 to 6 you need to configure that here
@@ -46,6 +47,7 @@ void loop(){
     vuMeter.scrollRight(ledTime, 1);
   }
   else{
+    buttonNotPressed = 1; //Keep track on where we are in the game
     gameOver();
   }
   
@@ -58,6 +60,7 @@ void loop(){
     vuMeter.scrollLeft(ledTime, 1);
   }
   else{
+    buttonNotPressed = 2; //Keep track on where we are in the game
     gameOver();
   }
 }
@@ -71,6 +74,7 @@ Use vuMeter.blinkAll(delayTime,numberOfBlinks) to make all LEDs blink
 void gameOver(){
   vuMeter.blinkAll(100,10);
   
-  vuMeter.scrollLeft(ledTime, 1);//this starts the game again
+  if(buttonNotPressed==1) vuMeter.scrollRight(ledTime, 1); //if button1 was not pressed, scroll LEDs to right to start over
+  else if(buttonNotPressed==2) vuMeter.scrollLeft(ledTime, 1); //if button2 was not pressed, scroll LEDs to left to start over
 }
 
