@@ -167,4 +167,15 @@ class LimitedServo{
         int pin;
         Servo servo;
     };
+
+
+class Joystick{
+    public:
+        Joystick(int x, int y);
+        int getX();
+        int getY();
+    private:
+        int x;
+        int y;
+    };
 #endif
