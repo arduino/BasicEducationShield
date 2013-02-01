@@ -118,7 +118,6 @@ class LED{
 	//Mostly for the LED component in Tinkerkit
 	public:
 		LED(int pin=9);
-		void config();
 		void begin();
 		void on();
 		void off();
