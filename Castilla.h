@@ -68,11 +68,12 @@ class Button{
 		bool pressed(int timeout=0);
 		bool released(int timeout=0);
 		bool doublePressed(int timeout=0,int tolerance=500);
+		virtual bool getState();
+		
 	protected:
 		int pin;
 		bool pressedValue;
 
-		virtual bool getState();
 		bool checkPress(int timeout, bool requiredState);
 
 };
@@ -81,6 +82,8 @@ class LDR : public Button{
 	public:
 		LDR(int pin=A1);
 		void config(int baseValue,int threashold);
+		virtual bool getState();
+		
 		void test();
 
 		//bool pressed(int timeout=0);
@@ -91,7 +94,6 @@ class LDR : public Button{
 		int base;
 		int threashold;
 
-		virtual bool getState();
 };
 
 class TiltSwitch : public Button{
@@ -105,10 +107,11 @@ class CapacitiveSwitch : public Button{
 		void config(int threashold);
 		void test();
 		long getValue(int min=0);
+		virtual bool getState();
+		
 	protected:
 		CapacitiveSensor sensor;
 		int threashold;
-		virtual bool getState();
 };
 
 class LED{
@@ -138,17 +141,21 @@ class PiezoKnockSensor{
 
 class ContinuousServo{
     public:
-        ContinuousServo(int pin=9);
-        void begin();
-        void goForward(int speed=180);
-        void goBackwards(int speed=0);
-        void standStill(int speed=97);
+        ContinuousServo(int pin=9, bool direction=true);
+        void begin(int stillSpeed=97);
+        void goForward(int speed=100);
+        void goBackwards(int speed=100);
+        void standStill();
         void setSpeed(int speed);
 
     private:
         int pin;
         int speed;
+		int stillSpeed;
+		bool direction;
         Servo servo;
+		
+		void go(int speed, bool goDirection);
 };
 
 class LimitedServo{
