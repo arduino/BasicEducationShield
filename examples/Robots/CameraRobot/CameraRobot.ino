@@ -9,8 +9,8 @@ Joystick joystick = Joystick(A1,A0);//Joystick(XanalogPin, YanalogPin)
 LimitedServo pan = LimitedServo(9); //Servo on the bottom that pans
 LimitedServo tilt = LimitedServo(10); //Servo that tilts
 
-int xAngle = 90; //Pan angle
-int yAngle = 90; //Tilt angle
+int panAngle = 90; //Pan angle
+int tiltAngle = 90; //Tilt angle
 
 void setup(){
   Serial.begin(9600);
@@ -18,29 +18,29 @@ void setup(){
   tilt.begin(); //servo is initialized
 }
 void loop(){
-  if(joystick.getX()==1 && xAngle<180){
+  if(joystick.getX()==1 && panAngle<180){
     //If the X value from the joystick equals 1 and
-    //xAngle is less than 180 degrees, increase xAngle with 1
-    xAngle++;
+    //panAngle is less than 180 degrees, increase panAngle with 1
+    panAngle++;
   }
-  else if(joystick.getX()==2 && xAngle>0
+  else if(joystick.getX()==2 && panAngle>0){
     //If the X value from the joystick equals 2 and
-    //xAngle is more than 0 degrees, decrease xAngle with 1
-    xAngle--;
+    //panAngle is more than 0 degrees, decrease panAngle with 1
+    panAngle--;
   }
   
-  if(joystick.getY()==1 && yAngle<180){ 
+  if(joystick.getY()==1 && tiltAngle<180){ 
     //If the Y value from the joystick equals 1 and
-    //yAngle is less than 180 degrees, increase yAngle with 1
-    yAngle++; 
+    //tiltAngle is less than 180 degrees, increase tiltAngle with 1
+    tiltAngle++; 
   }
-  else if(joystick.getY()==2 && yAngle>0){ 
+  else if(joystick.getY()==2 && tiltAngle>0){ 
     //If the Y value from the joystick equals 2 and
-    //yAngle is more than 0 degrees, decrease xAngle with 1
-    yAngle--;
+    //tiltAngle is more than 0 degrees, decrease tiltAngle with 1
+    tiltAngle--;
   }
   
-  pan.setAngle(xAngle); //Set position of the pan servo
-  tilt.setAngle(yAngle); //Set position of the tilt servo
+  pan.setAngle(panAngle); //Set position of the pan servo
+  tilt.setAngle(tiltAngle); //Set position of the tilt servo
   delay(5);
 }
