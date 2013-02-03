@@ -2,7 +2,7 @@
 #include <Servo.h>
 
 // Servo is connected to tinkerkit digital 9
-LimitedServo me=LimitedServo(9);
+StandardServo me=StandardServo(9);
 
 void setup(){
   me.begin(); //servo is initialized

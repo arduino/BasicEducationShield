@@ -5,17 +5,18 @@
 #include "WProgram.h"
 #endif
 
-LimitedServo::LimitedServo(int pin){
+StandardServo::StandardServo(int pin){
     this->pin=pin;
 }
 
-void LimitedServo::begin(){
+void StandardServo::begin(){
 	//Must be called in setup
     servo.attach(pin);
 }
 
-void LimitedServo::setAngle(int angle){
+void StandardServo::setAngle(int angle){
     //this->speed=speed;
     servo.write(angle);
 }
+
 
