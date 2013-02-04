@@ -69,7 +69,7 @@ class Button{
 		bool released(int timeout=0);
 		bool doublePressed(int timeout=0,int tolerance=500);
 		virtual bool getState();
-		
+
 	protected:
 		int pin;
 		bool pressedValue;
@@ -90,7 +90,7 @@ class LDR : public Button{
 		LDR(int pin=A1);
 		void config(int baseValue,int threashold);
 		virtual bool getState();
-		
+
 		void test();
 
 		//bool pressed(int timeout=0);
@@ -115,7 +115,7 @@ class CapacitiveSwitch : public Button{
 		void test();
 		long getValue(int min=0);
 		virtual bool getState();
-		
+
 	protected:
 		CapacitiveSensor sensor;
 		int threashold;
@@ -160,13 +160,13 @@ class ContinuousServo{
 		int stillSpeed;
 		bool direction;
         Servo servo;
-		
+
 		void go(int speed, bool goDirection);
 };
 
-class LimitedServo{
+class StandardServo{
     public:
-        LimitedServo(int pin=9);
+        StandardServo(int pin=9);
         void begin();
         void setAngle(int angle=90);
     private:
