@@ -78,6 +78,13 @@ class Button{
 
 };
 
+class ButtonGroup{
+	public:
+		ButtonGroup();
+		void begin(Button buttons[]);
+		
+}
+
 class LDR : public Button{
 	public:
 		LDR(int pin=A1);

@@ -35,4 +35,19 @@ void loop(){
   //Wait until the LDR gets uncover-covered.
   Serial.println(sensor.pressed());
   
+  
+  While(true){
+  //getState()
+  //	returns whether the sensor readings has 
+  //	passed the threshold. Returns true if the 
+  //	threshold has been passed, false if not. 
+  //	Unlike pressed or released, this function
+  //	does not stop the whole program.
+  //
+  //Continuously output whether the sensor has
+  //passed threshold.
+	Serial.println(sensor.getState());
+	delay(30);
+  }
+  
 }
