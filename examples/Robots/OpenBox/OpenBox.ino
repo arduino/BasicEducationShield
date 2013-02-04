@@ -7,7 +7,7 @@
 PiezoKnockSensor sensor=PiezoKnockSensor(A5);
 
 //Declare the servo motor for opening the lid
-LimitedServo lidOpener=LimitedServo(9);
+StandardServo lidOpener=StandardServo(9);
 
 void setup(){
   //define the threshold and debounce time of the knock 

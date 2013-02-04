@@ -7,7 +7,7 @@
 #include <CapacitiveSensor.h>
 
 //Declare the servo for controlling the string doll
-LimitedServo me=LimitedServo(9);
+StandardServo me=StandardServo(9);
 
 //Declare the capacitive sensor
 CapacitiveSwitch sensor=CapacitiveSwitch(13,12);

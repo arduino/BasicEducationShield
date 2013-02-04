@@ -1,3 +1,11 @@
+/*	ContinuousServo
+*
+*	Continuous servo looks the same as a standard servo, but it’s 
+*	capable of rotating continuous like a normal motor. You can not 
+*	control which angle it’s pointing to, but you can specify how 
+*	fast it spins, and which direction it spins. 
+*
+*/
 #include <Castilla.h>
 
 //It's necessary to include Servo.h if servo is used
