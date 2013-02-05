@@ -20,7 +20,7 @@ void setup(){
 void loop(){
   //Play a different sound according to which 
   //button has been pressed
-  switch getInput(){
+  switch(getInput()){
     case 0:
       player.play("0.wav");
     case 1:
@@ -31,7 +31,7 @@ void loop(){
   
   //Keep the program waiting while the sound is 
   //being played, otherwise there'll be no sound!
-  while(me.playing){
+  while(player.isplaying){
     
   }
 }

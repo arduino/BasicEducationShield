@@ -83,7 +83,7 @@ class ButtonGroup{
 		ButtonGroup();
 		void begin(Button buttons[]);
 		
-}
+};
 
 class LDR : public Button{
 	public:
