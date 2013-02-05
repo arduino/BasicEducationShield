@@ -42,6 +42,7 @@ void loop(){
     //Change the sample rate during playback. Make it sounds
     //funny. It's not necessary for playing a sound.
     player.setSampleRate(player.dwSamplesPerSec*multiplier);
-	
+
+    delay(30);
   }
 }
