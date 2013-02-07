@@ -22,3 +22,8 @@ The team creating this collection of exercises is made by:
 - D. Cuartielles (Coordination and Spanish Language Supervision)
 
 If you want to collaborate by adding translations to this collection of exercises, just send us a note to d.cuartielles AT arduino.cc
+
+IMPORTANT
+=========
+
+Move the folder CapacitiveSensor and SoundWave to the libraries folder of your Arduino installation before using. Some features are dependent on them.
