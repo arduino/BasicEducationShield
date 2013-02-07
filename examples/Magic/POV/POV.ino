@@ -22,7 +22,7 @@ int rowLength = 22; // Width of the message, copy this number the message array
 int delayTime = 5; // Time it takes to show a row in milliseconds
 
 // The message where 0 is LOW and 1 is HIGH
-int message[5][22]={
+boolean message[5][22]={
   // H H H H   O O O O   L L L L   A A A A
   {0,1,0,0,1,0,0,1,1,0,0,1,0,0,0,0,0,1,1,0,0,0},
   {0,1,0,0,1,0,1,0,0,1,0,1,0,0,0,0,1,0,0,1,0,0},
@@ -47,9 +47,9 @@ void loop(){
     for (int i = 2; i < 7; i++) {
       // Checks if the array says HIGH
       if (message[i-1][rowCount] == 1) {
-        vuMeter.ON(i);
+        vuMeter.on(i);
       } else {
-        vuMeter.OFF(i);
+        vuMeter.off(i);
       }
     }
     rowCount++;
@@ -58,4 +58,3 @@ void loop(){
   delay(delayTime); // This is the delay per row
 
 }
-
