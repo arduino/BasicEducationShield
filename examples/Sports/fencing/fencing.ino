@@ -10,9 +10,9 @@ When it does turn green, the first to swing the sword wins.
 //Position of the leds in VU-meter is represented
 //By their names here. So we can use names to
 //find LEDs later
-#define RED_LED 0
+#define YELLOW_LED_1 0 
 #define GREEN_LED 1
-#define YELLOW_LED_1 2
+#define RED_LED 2
 #define YELLOW_LED_2 3
 
 //An array stores which pins the VU-meter is connected
@@ -21,8 +21,8 @@ int ledPins[]={2,3,4,5};
 int pinCount=4;
 VUMeter lights;
 
-TiltSwitch player_1 = TiltSwitch(10);
-TiltSwitch player_2 = TiltSwitch(9);
+TiltSwitch player_1 = TiltSwitch(9);
+TiltSwitch player_2 = TiltSwitch(10);
 
 void setup(){
   lights.config(pinCount,ledPins);
