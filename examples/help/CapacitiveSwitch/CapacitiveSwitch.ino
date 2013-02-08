@@ -21,8 +21,8 @@
 
 #include <Castilla.h>
 
-//The sensor is connected between 13 and 12 by default
-CapacitiveSwitch me=CapacitiveSwitch(13,12);
+//The sensor is connected between 2 and 3 by default
+CapacitiveSwitch me=CapacitiveSwitch(2,3);
 
 void setup(){
   Serial.begin(9600);

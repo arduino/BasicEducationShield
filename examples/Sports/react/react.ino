@@ -12,7 +12,7 @@ as you can. If you fail, it’s game over.
 #include "pitches.h"
 
 //Define the 3 LEDs
-int ledPins[] = {2, 3, 4};  
+int ledPins[] = {9, 10, 11};  
 int pinCount = 3;
 VUMeter LEDs;
 
@@ -33,9 +33,9 @@ void setup(){
   Serial.begin(9600);
   
   //Configure the pads
-  pad[0] = CapacitiveSwitch(13,12);
-  pad[1] = CapacitiveSwitch(13,11);
-  pad[2] = CapacitiveSwitch(13,10);
+  pad[0] = CapacitiveSwitch(2,3);
+  pad[1] = CapacitiveSwitch(2,4);
+  pad[2] = CapacitiveSwitch(2,5);
   pad[0].config(900);
   pad[1].config(900);
   pad[2].config(900);
