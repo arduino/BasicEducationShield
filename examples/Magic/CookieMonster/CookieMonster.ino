@@ -32,7 +32,7 @@
  */
 
 //Define the capacitive sensor
-CapacitiveSwitch sensor=CapacitiveSwitch(13,12);
+CapacitiveSwitch sensor=CapacitiveSwitch(2,3);
 //Use Tinkerkit LED(or Tinkerkit LED matrix) here. 
 //Deinfe the LED
 LED led=LED(9);
