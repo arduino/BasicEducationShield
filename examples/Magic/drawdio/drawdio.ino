@@ -11,8 +11,8 @@
 #include "pitches.h"
 #include <Castilla.h>
 
-//Capacitive switch connected between 13 and 12
-CapacitiveSwitch me=CapacitiveSwitch(13,12);
+//Capacitive switch connected between 2 and 3
+CapacitiveSwitch me=CapacitiveSwitch(2,3);
 
 //A piezo speaker connected to digital pin 8
 Melody speaker=Melody(8);
