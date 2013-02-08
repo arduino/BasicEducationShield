@@ -7,7 +7,7 @@
 #include <CapacitiveSensor.h>
 
 //Declare the servo for controlling the string doll
-StandardServo me=StandardServo(9);
+Servo pull;
 
 //Declare the capacitive sensor
 CapacitiveSwitch sensor=CapacitiveSwitch(13,12);
@@ -17,15 +17,15 @@ void setup(){
   sensor.config(400);
   
   //initialize the servo motor
-  me.begin();
+  pull.attach(9);
 }
 void loop(){
   if(sensor.getState()){
 	//If the capacitive sensor is touched, lift the doll
-    me.setAngle(30);
+    pull.write(30);
   }else{
 	//Otherwise, lower the doll
-    me.setAngle(0);
+    pull.write(0);
   }
   delay(30);
 

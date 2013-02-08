@@ -7,7 +7,7 @@
 PiezoKnockSensor sensor=PiezoKnockSensor(A0);
 
 //Declare the servo motor for opening the lid
-StandardServo lidOpener=StandardServo(9);
+Servo lidOpener;
 
 void setup(){
   //define the threshold and debounce time of the knock 
@@ -17,16 +17,16 @@ void setup(){
   sensor.config(40,80);
   
   //initialize the servo
-  lidOpener.begin();
+  lidOpener.attach(9);
 }
 void loop(){
   //Knock the box to open it
   if(sensor.knocked()){
 	//rotate the servo motor to open the lid
-    lidOpener.setAngle(170);
+    lidOpener.write(170);
     delay(3000);
 	//close the lid
-    lidOpener.setAngle(10);
+    lidOpener.write(10);
     delay(500);
   }
 }

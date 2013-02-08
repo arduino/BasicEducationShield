@@ -1,25 +1,34 @@
 #include <Castilla.h>
 #include <Servo.h>
 
-// Two standard servos are connected to each of 
-// the tinkerkit digital connections, that is 9 and 10
-StandardServo front=StandardServo(9); 
-StandardServo back=StandardServo(10);
+Servo front, back;
 
 void setup(){
-  front.begin(); //servos are initialized
-  back.begin();
+  //servos are initialized
+  front.attach(9); 
+  back.attach(10);
 }
 
 void loop(){
   //Make the robot crawl by setting the servos to opposite angles.
   //90 is the middle angle
-  front.setAngle(120);
+  back.detach();
+  front.attach(9);
+  front.write(120);   //Rotation front legs
   delay(200);
-  back.setAngle(60);
+  
+  front.detach();
+  back.attach(10);
+  back.write(60);
   delay(200);
-  front.setAngle(60);
+  
+  back.detach();
+  front.attach(9);
+  front.write(60);
   delay(200);
-  back.setAngle(120);
+  
+  front.detach();
+  back.attach(10);
+  back.write(120);
   delay(200);
 }
