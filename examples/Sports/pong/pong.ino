@@ -43,7 +43,7 @@ void loop(){
   by scrolling the LEDs to the right
   else if button1 is not pressed, the program will jump to gameOver()
   */
-  if(button1.pressed(pressTime)){
+  if(button1.released(pressTime)){
     vuMeter.scrollRight(ledTime, 1);
   }
   else{
@@ -56,7 +56,7 @@ void loop(){
   by scrolling the LEDs to the left
   else if button2 is not pressed, the program will jump to gameOver()
   */
-  if(button2.pressed(pressTime)){
+  if(button2.released(pressTime)){
     vuMeter.scrollLeft(ledTime, 1);
   }
   else{
@@ -77,4 +77,3 @@ void gameOver(){
   if(buttonNotPressed==1) vuMeter.scrollRight(ledTime, 1); //if button1 was not pressed, scroll LEDs to right to start over
   else if(buttonNotPressed==2) vuMeter.scrollLeft(ledTime, 1); //if button2 was not pressed, scroll LEDs to left to start over
 }
-
