@@ -3,7 +3,7 @@
 //The number of knocks can be recorded
 #define MAX_KNOCKS 30
 
-PiezoKnockSensor sensor=PiezoKnockSensor(A5);
+PiezoKnockSensor sensor=PiezoKnockSensor(A0);
 Melody speaker=Melody(8);
 
 //An array for remembering the knock pattern
@@ -77,8 +77,8 @@ void playback(){
   //Play the knock pattern back to you through the
   //speaker piezo
   for(int i=0;timer[i]!=0;i++){
-    //Make a beep sound with tone of 20
-    speaker.beep(20);
+    //Make a beep sound with tone 200 for 30 milliseconds
+    speaker.playTone(200, 30);
     if(timer[i+1]){
       delay(timer[i+1]-timer[i]);
     }
