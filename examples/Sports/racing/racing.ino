@@ -27,7 +27,6 @@ CapacitiveSwitch leftFoot=CapacitiveSwitch(2,3);
 CapacitiveSwitch rightFoot=CapacitiveSwitch(2,4);
 
 int score;
-boolean win;
 
 void setup(){
   //initializing the game, set up all the components
@@ -57,15 +56,10 @@ void loop(){
   scoreBoard.fill(LED);
   //When you get 100 points, you win
   if(score>100){
-    win=true;
-  }
-  
-  //if you win, blink all leds for celebration
-  //See vuMeter in refence list to make your own blink animation
-  if(win){
+    //if you win, blink all leds for celebration
+    //See vuMeter in refence list to make your own blink animation
     scoreBoard.blinkAll(50,5); 
     //and reset the game
-    win=false;
     score=0;
   }
   
