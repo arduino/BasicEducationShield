@@ -3,8 +3,8 @@
 //It's necessary to include Servo.h if servo is used
 #include <Servo.h> 
 
-//Declare the pezio knock sensor. Connected to A5
-PiezoKnockSensor sensor=PiezoKnockSensor(A5);
+//Declare the pezio knock sensor. Connected to A0
+PiezoKnockSensor sensor=PiezoKnockSensor(A0);
 
 //Declare the servo motor for opening the lid
 Servo lidOpener;

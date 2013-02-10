@@ -19,7 +19,7 @@ VUMeter vuMeter;
 
 int rowCount = 0; // Stores the number of rows
 int rowLength = 22; // Width of the message, copy this number the message array
-int delayTime = 5; // Time it takes to show a row in milliseconds
+int delayTime = 9; // Time it takes to show a row in milliseconds
 
 // The message where 0 is LOW and 1 is HIGH
 boolean message[5][22]={
@@ -29,6 +29,7 @@ boolean message[5][22]={
   {0,1,1,1,1,0,1,0,0,1,0,1,0,0,0,0,1,1,1,1,0,0},
   {0,1,0,0,1,0,1,0,0,1,0,1,0,0,0,0,1,0,0,1,0,0},
   {0,1,0,0,1,0,0,1,1,0,0,1,1,1,1,0,1,0,0,1,0,0}
+
 };
 
 void setup(){
@@ -44,9 +45,9 @@ void loop(){
     rowCount = 0; // Reset the rowCount
   } else {
     // Shows the message
-    for (int i = 2; i < 7; i++) {
+    for (int i = 0; i < pinCount; i++) {
       // Checks if the array says HIGH
-      if (message[i-1][rowCount] == 1) {
+      if (message[i][rowCount] == 1) {
         vuMeter.on(i);
       } else {
         vuMeter.off(i);
@@ -55,6 +56,6 @@ void loop(){
     rowCount++;
   }
 
-  delay(delayTime); // This is the delay per row
+  delay(delayTime);// This is the delay per row
 
 }
