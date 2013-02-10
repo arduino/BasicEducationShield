@@ -12,7 +12,7 @@
 
 //Be careful: Piezo as speaker is connected to digital pin
 //while piezo as knock sensor is connected to analog pin.
-PiezoKnockSensor sensor=PiezoKnockSensor(A5);
+PiezoKnockSensor sensor=PiezoKnockSensor(A0);
 
 void setup(){
   Serial.begin(9600);
