@@ -21,11 +21,11 @@ void setup(){
 }
 void loop(){
   if(sensor.getState()){
-	//If the capacitive sensor is touched, lift the doll
-    pull.write(90);
-  }else{
-	//Otherwise, lower the doll
+	//If the capacitive sensor is touched, pull the strings
     pull.write(0);
+  }else{
+	//Otherwise, loosen the strings
+    pull.write(90);
   }
   delay(30);
 
