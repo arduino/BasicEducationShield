@@ -14,19 +14,22 @@ void setup(){
   //sensor. Threshold defines how hard you need to knock,
   //debounce time prevents the sensor from detecting 
   //false knocks, but also limits how rapid you can knock.
-  sensor.config(40,80);
+  sensor.config(200,80);
   
   //initialize the servo
   lidOpener.attach(9);
+  //Rotate servo to close lid
+  lidOpener.write(0); 
 }
 void loop(){
-  //Knock the box to open it
+
   if(sensor.knocked()){
 	//rotate the servo motor to open the lid
-    lidOpener.write(170);
+    lidOpener.write(60);
     delay(3000);
 	//close the lid
-    lidOpener.write(10);
-    delay(500);
+    lidOpener.write(0);
+    delay(200);
   }
+  
 }
