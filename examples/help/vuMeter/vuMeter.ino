@@ -44,12 +44,13 @@ void loop(){
   //
   //Fill 5 LEDs
   me.fill(5);
-  delay(1000);
+  delay(3000);
   
   //clear()
   //
   //turn all the LEDs off
   me.clear();
+  delay(1000);
   
   //on(index)
   //  index: which LED being turned on
