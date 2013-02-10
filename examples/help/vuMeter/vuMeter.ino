@@ -39,6 +39,18 @@ void setup(){
   
 }
 void loop(){
+  //fill(number)
+  //  number: how many leds from left shall be light up
+  //
+  //Fill 5 LEDs
+  me.fill(5);
+  delay(1000);
+  
+  //clear()
+  //
+  //turn all the LEDs off
+  me.clear();
+  
   //on(index)
   //  index: which LED being turned on
   //
@@ -93,15 +105,4 @@ void loop(){
   me.fillFrom(1,3);
   delay(2000);
   
-  //fill(number)
-  //  number: how many leds from left shall be light up
-  //
-  //Fill 5 LEDs
-  me.fill(5);
-  delay(1000);
-  
-  //clear()
-  //
-  //turn all the LEDs off
-  me.clear();
 }
