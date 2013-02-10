@@ -32,7 +32,6 @@ void setup(){
   //initializing the game, set up all the components
   //and variables
   score=0;
-  win=false;
   
   //Connect scoreboard
   scoreBoard.config(pinCount,ledPins);
