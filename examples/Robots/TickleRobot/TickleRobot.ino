@@ -22,7 +22,7 @@ void setup(){
 void loop(){
   if(sensor.getState()){
 	//If the capacitive sensor is touched, lift the doll
-    pull.write(30);
+    pull.write(90);
   }else{
 	//Otherwise, lower the doll
     pull.write(0);
