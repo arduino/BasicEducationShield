@@ -10,7 +10,7 @@
 Servo pull;
 
 //Declare the capacitive sensor
-CapacitiveSwitch sensor=CapacitiveSwitch(13,12);
+CapacitiveSwitch sensor=CapacitiveSwitch(2,3);
 
 void setup(){
   //initialize the capacitive sensor. Threshold is 400
