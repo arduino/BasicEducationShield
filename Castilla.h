@@ -82,7 +82,7 @@ class ButtonGroup{
 	public:
 		ButtonGroup();
 		void begin(Button buttons[]);
-		
+
 };
 
 class LDR : public Button{
@@ -163,17 +163,6 @@ class ContinuousServo{
 
 		void go(int speed, bool goDirection);
 };
-
-class StandardServo{
-    public:
-        StandardServo(int pin=9);
-        void begin();
-        void setAngle(int angle=90);
-    private:
-        int pin;
-        Servo servo;
-    };
-
 
 class Joystick{
     public:
