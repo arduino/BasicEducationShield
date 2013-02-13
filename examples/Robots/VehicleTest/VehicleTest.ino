@@ -9,8 +9,8 @@
 #include <Castilla.h>
 
 //Declare the left and right LDR sensor
-LDR sensorLeft=LDR(A4);
-LDR sensorRight=LDR(A5);
+LDR sensorLeft=LDR(A0);
+LDR sensorRight=LDR(A2);
 
 void setup(){
   Serial.begin(9600);
