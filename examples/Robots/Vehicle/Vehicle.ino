@@ -8,8 +8,8 @@ ContinuousServo left=ContinuousServo(10,false);
 ContinuousServo right=ContinuousServo(9,true);
 
 //Declare the two LDR sensors
-LDR sensorLeft=LDR(A4);
-LDR sensorRight=LDR(A5);
+LDR sensorLeft=LDR(A0);
+LDR sensorRight=LDR(A2);
 
 void setup(){
   //initialize the LDR sensors
