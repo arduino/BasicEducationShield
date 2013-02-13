@@ -14,21 +14,21 @@ void loop(){
   //90 is the middle angle
   back.detach();
   front.attach(9);
-  front.write(120);   //Rotation front legs
+  front.write(110);   //Rotation front legs
   delay(200);
   
   front.detach();
   back.attach(10);
-  back.write(60);
+  back.write(70);
   delay(200);
   
   back.detach();
   front.attach(9);
-  front.write(60);
+  front.write(70);
   delay(200);
   
   front.detach();
   back.attach(10);
-  back.write(120);
+  back.write(110);
   delay(200);
 }
