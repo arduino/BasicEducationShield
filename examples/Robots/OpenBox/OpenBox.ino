@@ -1,3 +1,10 @@
+/* 
+* This is an open source box. More importantly, 
+* it’s a automatic opening box. When you knock on it, 
+* the box opens. Save/take your candies from it, 
+* and the box closes by itself.
+*/
+
 #include <Castilla.h>
 
 //It's necessary to include Servo.h if servo is used
