@@ -1,3 +1,10 @@
+/*
+*Time to practice your DJ skills with the magic BoomBox! 
+*Record some wav sound, save them in the SD card, 
+*and you have a fun instrument for messing around with sound. 
+*Bring it to a party next time and you’ll be the super star!
+*/
+
 #include <Castilla.h>
 
 //We need this library for playing sound

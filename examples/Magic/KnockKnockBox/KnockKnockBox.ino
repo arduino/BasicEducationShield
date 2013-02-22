@@ -1,3 +1,8 @@
+/*
+* This is a magic box with little monsters living inside. 
+* If you knock on the box, it will knock back in the same pattern!
+*/
+
 #include <Castilla.h>
 
 //The number of knocks can be recorded
