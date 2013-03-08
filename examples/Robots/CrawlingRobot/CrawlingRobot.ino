@@ -1,3 +1,9 @@
+/*
+* This small robot can crawl. 
+* It’s all it can do, and it isn’t very good at it. 
+* But it is super cute and great fun.
+*/
+
 #include <Castilla.h>
 #include <Servo.h>
 

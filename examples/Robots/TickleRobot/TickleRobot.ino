@@ -1,3 +1,10 @@
+/* 
+* Do you like string puppets? This is one of them, 
+* and very special because it’s a ticklish puppet. 
+* If you tickle it, it will start jumping around 
+* like crazy(or at least it tries to).
+*/
+
 #include <Castilla.h>
 
 //Necessary to include Servo.h when using Servo

@@ -1,3 +1,11 @@
+/*
+* This little car is simple and smart. It goes on 
+* and on straight, but if you point a flashlight on it, 
+* the Vehicle will turn towards the light. 
+* So just take a flashlight(or use the flashlight of 
+* your mobile phone), stir it around and have fun!
+*/
+
 #include <Castilla.h>
 
 //Servo.h is necessary to be included here
