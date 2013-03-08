@@ -1,3 +1,10 @@
+/*
+*Time to practice your DJ skills with the magic BoomBox! 
+*Record some wav sound, save them in the SD card, 
+*and you have a fun instrument for messing around with sound. 
+*Bring it to a party next time and you’ll be the super star!
+*/
+
 #include <Castilla.h>
 
 //We need this library for playing sound
@@ -6,27 +13,40 @@
 //Declare the sound player
 SoundWave player;
 
-//Declare 4 buttons. The sound player will
-//always take pin 3 and 11, so don't use them
-Button b0=Button(4);
-Button b1=Button(5);
-Button b2=Button(6);
+//Declare a button group with 3 buttons. The 
+//sound player secrectly takes pin 3 and 11,
+//so don't use them
+ButtonGroup bg;
+int buttons[]={4,5,6};
+//There're 3 buttons in the button group.
+int buttonsCount=3;
 
 void setup(){
   Serial.begin(9600);
   //Initialize the sound player
   player.begin();
+  //Initialize the button group. 
+  bg.begin(buttonsCount,buttons);
+
 }
 void loop(){
-  //Play a different sound according to which 
-  //button has been pressed
-  switch(getInput()){
+  //Wait for one of the buttons to be pressed.
+  //According to which button is pressed, it 
+  //returns either 0, 1 or 2
+  int pressedButton=bg.pressed();
+  
+  //Play a different sound according to the
+  //button pressed.
+  switch(pressedButton){
     case 0:
       player.play("0.wav");
+      break;
     case 1:
       player.play("1.wav");
+      break;
     case 2:
       player.play("2.wav");
+      break;
   }
   
   //Keep the program waiting while the sound is 
@@ -36,14 +56,4 @@ void loop(){
   }
 }
 
-//Wait for either of the 3 buttons to be pressed
-int getInput(){
-  while(true){
-    if (b0.pressed(10))
-      return 0;
-    else if (b1.pressed(10))
-      return 1;
-    else if (b2.pressed(10))
-      return 2;
-  }
-}
+

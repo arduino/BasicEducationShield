@@ -12,6 +12,7 @@
 
 
 #define LED_LENGTH 20
+#define BUTTONGROUP_LENGTH 10
 
 class VUMeter{
 	public:
@@ -81,8 +82,15 @@ class Button{
 class ButtonGroup{
 	public:
 		ButtonGroup();
-		void begin(Button buttons[]);
-
+		void begin(int length, int buttons[], bool pressedValue=HIGH);
+		int pressed(int timeout=0);
+	private:
+		int buttons[BUTTONGROUP_LENGTH];
+		//bool iStarted[BUTTONGROUP_LENGTH];
+		int buttonsCount;
+		bool pressedValue;
+		
+		int checkPress(int timeout, bool requiredState);
 };
 
 class LDR : public Button{
