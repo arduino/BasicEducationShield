@@ -1,11 +1,11 @@
 /*	CapacitiveSwitch Test
-*	
-*	When making use of sensor readings from CapacitiveSwitch, 
-*	This sketch helps you decide the threshold by showing 
-*	capacitive values of different materials. 
 *
-*	Just touch the objects you're going to experiment with, 
-*	take note of the biggest and smallest values. In your 
+*	When making use of sensor readings from CapacitiveSwitch,
+*	This sketch helps you decide the threshold by showing
+*	capacitive values of different materials.
+*
+*	Just touch the objects you're going to experiment with,
+*	take note of the biggest and smallest values. In your
 *	project code, use these values to map to your desired
 *	outcome.
 *
@@ -15,7 +15,7 @@
 */
 
 #include <CapacitiveSensor.h>
-#include <Castilla.h>
+#include <BasicEducationShield.h>
 
 //The sensor is connected between 2 and 3 by default
 CapacitiveSwitch me=CapacitiveSwitch(2,3);
@@ -26,6 +26,6 @@ void setup(){
 void loop(){
   //Print out the value of the sensor
   me.test();
-  
+
   delay(30);
 }

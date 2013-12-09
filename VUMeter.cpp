@@ -1,4 +1,4 @@
-#include "Castilla.h"
+#include "BasicEducationShield.h"
 
 #if ARDUINO >= 100
 #include "Arduino.h"
@@ -80,7 +80,7 @@ void VUMeter::fill(int length){
 
 	fillFrom(0,length-1);
 }
-void VUMeter::blink(int index, int speed,int times){	
+void VUMeter::blink(int index, int speed,int times){
 	//blink one leds for a few times(default is once)
 	//speed is the delay time for both on and off
 	for(int i=0;i<times;i++){

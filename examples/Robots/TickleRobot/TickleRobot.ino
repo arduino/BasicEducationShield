@@ -1,11 +1,11 @@
-/* 
-* Do you like string puppets? This is one of them, 
-* and very special because it’s a ticklish puppet. 
-* If you tickle it, it will start jumping around 
+/*
+* Do you like string puppets? This is one of them,
+* and very special because it’s a ticklish puppet.
+* If you tickle it, it will start jumping around
 * like crazy(or at least it tries to).
 */
 
-#include <Castilla.h>
+#include <BasicEducationShield.h>
 
 //Necessary to include Servo.h when using Servo
 #include <Servo.h>
@@ -22,7 +22,7 @@ CapacitiveSwitch sensor=CapacitiveSwitch(2,3);
 void setup(){
   //initialize the capacitive sensor. Threshold is 400
   sensor.config(400);
-  
+
   //initialize the servo motor
   pull.attach(9);
 }

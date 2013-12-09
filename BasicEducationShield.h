@@ -1,5 +1,5 @@
-#ifndef Castilla_h
-#define Castilla_h
+#ifndef BasicEducationShield_h
+#define BasicEducationShield_h
 
 #if ARDUINO >= 100
 #include "Arduino.h"
@@ -89,7 +89,7 @@ class ButtonGroup{
 		//bool iStarted[BUTTONGROUP_LENGTH];
 		int buttonsCount;
 		bool pressedValue;
-		
+
 		int checkPress(int timeout, bool requiredState);
 };
 

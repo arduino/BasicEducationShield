@@ -4,7 +4,7 @@
 *  .wav files from SD card for Arduino.
 *
 */
-#include <Castilla.h>
+#include <BasicEducationShield.h>
 
 //We need this library for playing sound
 #include <SoundWave.h>
@@ -22,21 +22,21 @@ void setup(){
 void loop(){
   //play(filename)
   //  filename: filename of the sound stored in SD card
-  //		must be a .wav file    
+  //		must be a .wav file
   //
   //Play the file named "0.wav" on SD card
   player.play("0.wav");
-  
+
   //Stop the program from going further while the sound is
   //Playing. It's necessary to have this loop here
   while(player.isplaying){
-	
+
     //setSampleRate(SampleRate)
     //  SampleRate: how fast the sound is played. Normally
-    //    	it's based on original sample rate, 
+    //    	it's based on original sample rate,
     //		thus "player.dwSamplesPerSec*multiplier."
     //
-    //		"multiplier" is a float point number, 
+    //		"multiplier" is a float point number,
     //          typically between 0.5 and 2
     //
     //Change the sample rate during playback. Make it sounds

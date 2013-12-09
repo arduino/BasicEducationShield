@@ -8,7 +8,7 @@ quickly back and forth to achieve the effect.
 The button helps change settings for the display of this effect.
 */
 
-#include <Castilla.h>
+#include <BasicEducationShield.h>
 /*
 An array of pin numbers to which LEDs are attached
 the defaults are 2 to 6 but you can choose any of the digital pins
@@ -35,7 +35,7 @@ boolean message[5][22]={
 void setup(){
   // If your are using other pins than 2 to 6 you need to configure that here
   vuMeter.config(pinCount, ledPins);
-  
+
   vuMeter.begin(); //does the same as pinMode, LEDs are outputs
 }
 

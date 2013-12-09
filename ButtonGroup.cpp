@@ -1,4 +1,4 @@
-#include "Castilla.h"
+#include "BasicEducationShield.h"
 
 #if ARDUINO >= 100
 #include "Arduino.h"
@@ -30,7 +30,7 @@ int ButtonGroup::checkPress(int timeout, bool requiredValue){
 	for(int i=0;i<this->buttonsCount;i++){
 		iStarted[i]=false;
 	}
-	
+
 	long timer=millis();
 	while(!timeout || millis()-timer<=timeout){
 		for(int i=0;i<this->buttonsCount;i++){
@@ -40,7 +40,7 @@ int ButtonGroup::checkPress(int timeout, bool requiredValue){
 			}else{
 				if(iStarted[i] && stat==requiredValue){
 					return i;
-					
+
 				}
 			}
 		}

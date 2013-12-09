@@ -1,9 +1,9 @@
 /*  ButtonGroup
 *  ButtonGroup is used for making a few buttons to work
-*  together. 
+*  together.
 *
 */
-#include <Castilla.h>
+#include <BasicEducationShield.h>
 
 //Declaring the button group
 ButtonGroup bg;
@@ -21,13 +21,13 @@ void setup(){
 void loop(){
   Serial.println("Please press a button");
   //pressed(timeout)
-  //  timeout:milliseconds within which one button should 
+  //  timeout:milliseconds within which one button should
   //          be pressed. If pressed within time, the function
   //          returns number of the button within inital list.
   //          Otherwise -1. If not used, it waits untill being
-  //          pressed. 
+  //          pressed.
   //
-  //Wait until one button is pressed.  
+  //Wait until one button is pressed.
   Serial.println(bg.pressed());
   delay(10);
 }

@@ -5,12 +5,12 @@ Two players hold their tilt switch swords and wait for the
 signal light to turn green (there’s a random waiting time).
 When it does turn green, the first to swing the sword wins.
 */
-#include <Castilla.h>
+#include <BasicEducationShield.h>
 
 //Position of the leds in VU-meter is represented
 //By their names here. So we can use names to
 //find LEDs later
-#define YELLOW_LED_1 0 
+#define YELLOW_LED_1 0
 #define GREEN_LED 1
 #define RED_LED 2
 #define YELLOW_LED_2 3
@@ -38,7 +38,7 @@ void setup(){
 void loop(){
  lights.clear();
 
- //Red led means both of you should hold the tilter 
+ //Red led means both of you should hold the tilter
  //switch sword up
  lights.on(RED_LED);
 
@@ -49,7 +49,7 @@ void loop(){
  lights.off(RED_LED);
  //When the green led turns on, game starts
  lights.on(GREEN_LED);
- 
+
  //Swing your swords as fast as you can, the faster one
  //Will be returned by getWinner()
  int winner=getWinner();
@@ -61,10 +61,10 @@ void loop(){
    lights.on(YELLOW_LED_2);
  }
  delay(5000);
- 
+
 }
 
-//The function below waits for either of the tilter 
+//The function below waits for either of the tilter
 //switch to be swang. The first one to swing
 //will be returned by its number
 int getWinner(){

@@ -1,4 +1,4 @@
-#include "Castilla.h"
+#include "BasicEducationShield.h"
 #if ARDUINO >= 100
 #include "Arduino.h"
 #else
@@ -30,7 +30,7 @@ bool Button::doublePressed(int timeout,int tolerance){
 	}
 }
 bool Button::checkPress(int timeout,bool requiredState){
-	//help function, check if the button has changed 
+	//help function, check if the button has changed
 	//from not "requiredState" to "requiredState" within timeout
 	long timer=millis();
 	bool iStart=false;
@@ -46,7 +46,7 @@ bool Button::checkPress(int timeout,bool requiredState){
 		}
 		//delay(10);
 	}while(millis()-timer<=timeout || !timeout );
-	
+
 	return false;
 }
 

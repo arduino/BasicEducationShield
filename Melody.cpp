@@ -1,4 +1,4 @@
-#include "Castilla.h"
+#include "BasicEducationShield.h"
 
 #if ARDUINO >= 100
 #include "Arduino.h"
@@ -18,7 +18,7 @@ void Melody::play(int length, int notes[],int duration[],float speed){
 	//Play the melody passed directly to this function. Saving memory
 	//and avoiding variable scope problems.
 	//length is the number of notes.
-	//speed is a float bigger than 1. The bigger it is, the slower 
+	//speed is a float bigger than 1. The bigger it is, the slower
 	//sound it makes.
 	for(int i=0;i<length && notes[i]!=-1 ;i++){
 		tone(pin,notes[i],1000/duration[i]);
@@ -53,7 +53,7 @@ void Melody::play(){
 		Serial.print(notes[i]);
 		Serial.print("\t");
 		Serial.println(duration[i]);
-		
+
 		tone(pin,notes[i],duration[i]);
 		int pauseBetweenNotes = duration[i];
 		delay(pauseBetweenNotes);

@@ -1,9 +1,9 @@
 /*
-* This is a magic box with little monsters living inside. 
+* This is a magic box with little monsters living inside.
 * If you knock on the box, it will knock back in the same pattern!
 */
 
-#include <Castilla.h>
+#include <BasicEducationShield.h>
 
 //The number of knocks can be recorded
 #define MAX_KNOCKS 30
@@ -20,7 +20,7 @@ boolean started;
 //Used for calculating if you have finished the pattern
 long timeoutBase;
 
-//If you stop knocking for the period of timeout, it'll 
+//If you stop knocking for the period of timeout, it'll
 //stop recording
 long timeout=2000;
 
@@ -29,29 +29,29 @@ int currentKnock;
 
 void setup(){
   Serial.begin(9600);
-  //define the threshold and debounce time of the knock 
+  //define the threshold and debounce time of the knock
   //sensor. Threshold defines how hard you need to knock,
-  //debounce time prevents the sensor from detecting 
+  //debounce time prevents the sensor from detecting
   //false knocks, but also limits how rapid you can knock.
   sensor.config(40,80);
-  
+
   //initializing the values
   started=false;
   timeoutBase=0;
   currentKnock=0;
   clearArray();
-  
+
   //pinMode(8,OUTPUT);
   //digitalWrite(8,LOW);
 }
 void loop(){
-  //Knock sensor waits for a short time and then move on. 
+  //Knock sensor waits for a short time and then move on.
   if(sensor.knocked(10)){
     //If it's the first knock in the round, start recording
     if(!started){
       started=true;
     }
-    
+
     long currentTime=millis();
     //Reset timeout
     timeoutBase=currentTime;
@@ -60,7 +60,7 @@ void loop(){
     currentKnock++;
   }
   if(started){
-    //If recording has started and you stop 
+    //If recording has started and you stop
     //knocking for the time of "timeout", it'll
     //stop recording and play it back to you.
     if(millis()-timeoutBase>timeout){

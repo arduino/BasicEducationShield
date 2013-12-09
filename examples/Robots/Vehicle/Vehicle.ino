@@ -1,12 +1,12 @@
 /*
-* This little car is simple and smart. It goes on 
-* and on straight, but if you point a flashlight on it, 
-* the Vehicle will turn towards the light. 
-* So just take a flashlight(or use the flashlight of 
+* This little car is simple and smart. It goes on
+* and on straight, but if you point a flashlight on it,
+* the Vehicle will turn towards the light.
+* So just take a flashlight(or use the flashlight of
 * your mobile phone), stir it around and have fun!
 */
 
-#include <Castilla.h>
+#include <BasicEducationShield.h>
 
 //Servo.h is necessary to be included here
 #include <Servo.h>
@@ -25,22 +25,22 @@ void setup(){
   sensorRight.config(200,500);
 
   //initialize the servo motors
-  left.begin(); 
+  left.begin();
   right.begin();
 }
 void loop(){
   if(sensorLeft.getState()){
 	//Left ldr detects strong light, the vechile turns left
-    left.goBackwards(); 
-    right.goForward(); 
+    left.goBackwards();
+    right.goForward();
   }else if(sensorRight.getState()){
 	//Right ldr detects strong light, the vechile turns right
-    left.goForward(); 
-    right.goBackwards(); 
+    left.goForward();
+    right.goBackwards();
   }else{
 	//No strong light detected, the vechile go straight
-    left.goForward(); 
-    right.goForward(); 
+    left.goForward();
+    right.goForward();
   }
   delay(30);
 }
