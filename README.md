@@ -1,7 +1,7 @@
-Castilla
+Basic Education Shield
 ========
 
-Castilla project library
+Basic Education Shield library
 
 This is an educational project carried by Arduino Verkstad in Malmo. It is a collection of exercises commissioned by the Center of Resources for Education at Castilla La Mancha to be tried out in the classrooms during the Srping 2013.
 
