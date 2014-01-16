@@ -153,25 +153,6 @@ class PiezoKnockSensor{
 		long debounceTime;
 };
 
-class ContinuousServo{
-    public:
-        ContinuousServo(int pin=9, bool direction=true);
-        void begin(int stillSpeed=97);
-        void goForward(int speed=100);
-        void goBackwards(int speed=100);
-        void standStill();
-        void setSpeed(int speed);
-
-    private:
-        int pin;
-        int speed;
-		int stillSpeed;
-		bool direction;
-        Servo servo;
-
-		void go(int speed, bool goDirection);
-};
-
 class Joystick{
     public:
         Joystick(int x, int y);
@@ -181,4 +162,25 @@ class Joystick{
         int x;
         int y;
     };
+
+class Wheels{
+    public:
+        Wheels(int lpin=10, int rpin=9);
+        void begin();
+        void goForward();
+        void goBackwards();
+        void turnLeft();
+        void turnRight();
+        void standStill();
+    private:
+        int top, low, still;
+        void go(int tl, int tr);
+        int lpin, rpin;
+        Servo left, right;
+        int fromL, fromR;
+        int toL, toR;
+        int tl, tr;
+    };
+
+
 #endif

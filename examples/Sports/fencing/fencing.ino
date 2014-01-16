@@ -1,15 +1,17 @@
 /*
-Fencing
-
-Two players hold their tilt switch swords and wait for the
-signal light to turn green (there’s a random waiting time).
-When it does turn green, the first to swing the sword wins.
+  Fencing
+  Test your reaction time against an opponent!
+  
+  In this game, two players will hold tilt switch swords. 
+  When the green LED randomly lights up, the first person 
+  to swing their sword wins. 
+  (c) 2013 Aduino Verkstad
 */
+
 #include <BasicEducationShield.h>
 
 //Position of the leds in VU-meter is represented
-//By their names here. So we can use names to
-//find LEDs later
+//by their names here. So we can use names to find LEDs later
 #define YELLOW_LED_1 0
 #define GREEN_LED 1
 #define RED_LED 2
@@ -38,8 +40,7 @@ void setup(){
 void loop(){
  lights.clear();
 
- //Red led means both of you should hold the tilter
- //switch sword up
+ //Red led means both of you should hold the tilt switch sword up right
  lights.on(RED_LED);
 
  //Wait for a random period of time, between 3 seconds
@@ -50,8 +51,8 @@ void loop(){
  //When the green led turns on, game starts
  lights.on(GREEN_LED);
 
- //Swing your swords as fast as you can, the faster one
- //Will be returned by getWinner()
+ //Swing your swords as fast as you can, the faster one 
+ //will be returned by getWinner()
  int winner=getWinner();
 
  //The yellow led by side of the winner will light up
@@ -61,7 +62,6 @@ void loop(){
    lights.on(YELLOW_LED_2);
  }
  delay(5000);
-
 }
 
 //The function below waits for either of the tilter

@@ -1,9 +1,14 @@
 /*
-Basketball
+  Basketball
+  
+  Score a goal!
+  
+  In this game, players will try to bounce a ping pong ball 
+  into a cup. Make five points to win. The score is tracked 
+  using a light dependent resistor (LDR).
+  
+  (c) 2013 Arduino Verkstad
 
-In this game you get to practise your ball shooting accuracy. An
-LDR (light dependant resistor) will count your score and a row of
-LEDs will display the score for you.
 */
 
 
@@ -27,14 +32,13 @@ void setup(){
   vuMeter.config(pinCount, ledPins);
   vuMeter.begin(); //does the same as pinMode, LEDs are outputs
 
-  ldr.config(837, 600); //first run LDRtest example to see what values you need to put here
-
+  ldr.config(800, 600); //first run LDRtest example to see what values you need to put here
 }
 
 void loop(){
   //if the ldr is covered the score increases with 1
   //and a sounds is played
-  if(ldr.pressed()){
+    ldr.pressed();
     score++;
     vuMeter.fill(score); //Turn on as many LEDs as the score
 
@@ -44,9 +48,6 @@ void loop(){
     piezo.play(numberOfNotes, melody, noteDurations, 1);
 
     delay(50);
-  }
-
-
 
   if(score>=pinCount) startOver(); //If the score equals the amount of LEDs you start over
 }

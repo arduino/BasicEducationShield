@@ -1,10 +1,12 @@
 /*
-React
-In this game your reaction skills are tested.
-The game consists of 3 LEDs and 3 capacitive
-sensors. When one LED lights up, you need to
-touch the belonging capacitive sensor as fast
-as you can. If you fail, it’s game over.
+  React
+  Test your reaction time!
+  
+  In this game, one of three LEDs will randomly light up. 
+  You must tap the corresponding capacitive sensor as quick 
+  as possible. If you don’t react fast enough, the game is over. 
+  
+  (c) 2013 Arduino Verkstad
 */
 
 #include <CapacitiveSensor.h>
@@ -25,21 +27,17 @@ int reactTime = 500;
 // the piezo connected to digital pin 8
 Melody piezo = Melody(8);
 
-
-
 void setup(){
   LEDs.config(pinCount, ledPins);
   LEDs.begin();
-  Serial.begin(9600);
-
+  
   //Configure the pads
   pad[0] = CapacitiveSwitch(2,3);
   pad[1] = CapacitiveSwitch(2,4);
   pad[2] = CapacitiveSwitch(2,5);
-  pad[0].config(900);
-  pad[1].config(900);
-  pad[2].config(900);
-
+  pad[0].config(100);
+  pad[1].config(100);
+  pad[2].config(100);
 }
 
 void loop(){
@@ -62,18 +60,21 @@ void loop(){
     piezo.play(numberOfNotes, melody, noteDurations, 1);
   }
   else{
+    //Else if the reaction is too slow, run the function gameOver()
     gameOver();
   }
 }
 
 void gameOver(){
+  //Turn all LEDs on
   LEDs.fill(pinCount);
 
+  //Play a melody
   int melody[] = { NOTE_E2, NOTE_C2};
   int noteDurations[] = { 2, 1};
   int numberOfNotes = 2;
   piezo.play(numberOfNotes, melody, noteDurations, 1);
 
   LEDs.blinkAll(100, 10);
-  LEDs.fill(0);
+  LEDs.fill(0); //Tun all LEDs off
 }
