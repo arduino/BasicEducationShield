@@ -1,11 +1,18 @@
 /*
-POV (Persistence of Vision)
-
-This is a toy consisting of a row of 5 LEDs(VU-meter).
-It is a proof of concept of the illusion of a text display
-using little effort. The user will have to wave the row of LEDs
-quickly back and forth to achieve the effect.
-The button helps change settings for the display of this effect.
+  POV (Persistence of Vision)
+  
+  With POV, persistence of vision, you can take eg a bike wheel
+  and make it into a display with just a few LEDs. Check out 
+  this video to see what we mean: 
+  http://www.youtube.com/watch?v=-TvGvVWS3IE
+  
+  In this project you will make one of these displays yourself. 
+  Wave it with long strokes or even hold it while running to 
+  display a text, a statement or a picture. The effect is most 
+  visible in a dark place so if you’re running, make sure not 
+  to run in to a tree or a friend. 
+  
+  (c) 2013 Arduino Verkstad
 */
 
 #include <BasicEducationShield.h>
@@ -18,7 +25,7 @@ int pinCount = 5;
 VUMeter vuMeter;
 
 int rowCount = 0; // Stores the number of rows
-int rowLength = 22; // Width of the message, copy this number the message array
+int rowLength = 22; // Width of the message, copy this number to the message array
 int delayTime = 9; // Time it takes to show a row in milliseconds
 
 // The message where 0 is LOW and 1 is HIGH

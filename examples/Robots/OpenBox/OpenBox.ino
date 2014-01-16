@@ -1,8 +1,11 @@
 /*
-* This is an open source box. More importantly,
-* it’s a automatic opening box. When you knock on it,
-* the box opens. Save/take your candies from it,
-* and the box closes by itself.
+  OpenBox
+  
+  OpenBox is an open source box that contains open source 
+  electronics. Oh, and it automatically opens when you 
+  knock on it. 
+  
+  (c) 2013 Arduino Verkstad
 */
 
 #include <BasicEducationShield.h>
@@ -21,21 +24,23 @@ void setup(){
   //sensor. Threshold defines how hard you need to knock,
   //debounce time prevents the sensor from detecting
   //false knocks, but also limits how rapid you can knock.
-  sensor.config(200,80);
+  //See the PiezoKnockSensor sketch in the help folder
+  //to make sure your values are correct
+  sensor.config(40,80);
 
   //initialize the servo
   lidOpener.attach(9);
   //Rotate servo to close lid
-  lidOpener.write(0);
+  lidOpener.write(60);
 }
 void loop(){
 
   if(sensor.knocked()){
 	//rotate the servo motor to open the lid
-    lidOpener.write(60);
-    delay(3000);
-	//close the lid
     lidOpener.write(0);
+    delay(3000); //Wait for 3 seconds
+    //close the lid
+    lidOpener.write(60);
     delay(200);
   }
 

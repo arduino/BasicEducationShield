@@ -1,14 +1,26 @@
 /*
-* This is a magic box with little monsters living inside.
-* If you knock on the box, it will knock back in the same pattern!
+  Knock Knock Box
+  
+  Knock on this coffin to awake the dead. Don’t worry, 
+  the skeleton won’t get out and come after you but it 
+  will reply from inside.
+  
+  Ok, we know that you know that there isn’t a real 
+  skeleton there. It's really a piezo used as a knock 
+  sensor. After you've made this project you might 
+  think of a handy way to use this sensor in other ways. 
+  Check out this secret knock detecting lock for some 
+  inspiration: http://www.youtube.com/watch?v=zE5PGeh2K9k 
+  
+  (c) 2013 Arduino Verkstad
 */
 
 #include <BasicEducationShield.h>
 
-//The number of knocks can be recorded
+//The number of knocks that can be recorded
 #define MAX_KNOCKS 30
 
-PiezoKnockSensor sensor=PiezoKnockSensor(A5);
+PiezoKnockSensor sensor=PiezoKnockSensor(A0);
 Melody speaker=Melody(8);
 
 //An array for remembering the knock pattern
@@ -28,7 +40,6 @@ long timeout=2000;
 int currentKnock;
 
 void setup(){
-  Serial.begin(9600);
   //define the threshold and debounce time of the knock
   //sensor. Threshold defines how hard you need to knock,
   //debounce time prevents the sensor from detecting
@@ -40,12 +51,11 @@ void setup(){
   timeoutBase=0;
   currentKnock=0;
   clearArray();
-
-  //pinMode(8,OUTPUT);
-  //digitalWrite(8,LOW);
 }
+
 void loop(){
-  //Knock sensor waits for a short time and then move on.
+  //Knock sensor waits for a short time if a knock is detected
+  //and then move on.
   if(sensor.knocked(10)){
     //If it's the first knock in the round, start recording
     if(!started){
@@ -55,7 +65,8 @@ void loop(){
     long currentTime=millis();
     //Reset timeout
     timeoutBase=currentTime;
-    //Record the knock
+    //Save the amount of milliseconds that have 
+    //passed since the last knock
     timer[currentKnock]=currentTime;
     currentKnock++;
   }
@@ -85,6 +96,8 @@ void playback(){
     //Make a beep sound with tone 200 for 30 milliseconds
     speaker.playTone(200, 30);
     if(timer[i+1]){
+      //Wait the same amount of milliseconds that was detected
+      //between the knocks
       delay(timer[i+1]-timer[i]);
     }
   }

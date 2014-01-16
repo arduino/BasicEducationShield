@@ -1,10 +1,16 @@
-/*  Drawdio
-*
-*  Make everything(almost) into a music instrument!
-*  Inspiration from Jay Siver's DRAWDIO
-*
-*  http://web.media.mit.edu/~silver/drawdio/
-*
+/*  
+  Drawdio
+
+  Draw audio with drawdio. You might think that this pen is magic,
+  and it might just be. Drawdio turns (almost) everything that is
+  conductive into an instrument. You can either make music by
+  drawing a picture or by touching the tip of it to different
+  conductive things around you. 
+  
+  (c) 2013 Arduino Verkstad
+  Inspiration from Jay Siver's DRAWDIO
+  http://web.media.mit.edu/~silver/drawdio/
+
 */
 
 #include <CapacitiveSensor.h>
@@ -26,8 +32,8 @@ int upperThreshold=900;
 
 //Define the lowest and highest tone. Defined
 //in pitches.h
-int toneLow=NOTE_C4;
-int toneHigh=NOTE_B4;
+int toneLow=NOTE_C3;
+int toneHigh=NOTE_B6;
 
 void setup(){
   //Nothing to do here. Magic?
