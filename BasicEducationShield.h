@@ -9,6 +9,7 @@
 
 #include "../CapacitiveSensor/CapacitiveSensor.h"
 #include "../Servo/Servo.h"
+#include "../SD/SD.h"
 
 
 #define LED_LENGTH 20
@@ -42,23 +43,12 @@ class VUMeter{
 class Melody{
 	public:
 		Melody(int pin);
-		/*
-		void setMelody(int lendgth, int notes[],int duration[]);*/
 		void play(int length, int notes[],int diration[], float speed=1.3);
 		void beep(int note=20, int length=30);
 		void playTone(int note, int length=10);
-		/*
-		void setNote(int index,int note);
-		int getNote(int index);
-		void setDuration(int index,int duration);
-		int getDuration(int index);*/
+
 	private:
 		int pin;
-		/*
-		int length;
-		int notes[LENGTH];
-		int duration[LENGTH];
-		*/
 
 };
 
@@ -74,7 +64,6 @@ class Button{
 	protected:
 		int pin;
 		bool pressedValue;
-
 		bool checkPress(int timeout, bool requiredState);
 
 };
@@ -98,12 +87,7 @@ class LDR : public Button{
 		LDR(int pin=A1);
 		void config(int baseValue,int threashold);
 		virtual bool getState();
-
 		void test();
-
-		//bool pressed(int timeout=0);
-		//bool released(int timeout=0);
-		//bool doublePressed(int timeout=0,int tolerance=500);
 
 	protected:
 		int base;
@@ -152,6 +136,19 @@ class PiezoKnockSensor{
 		int threshold;
 		long debounceTime;
 };
+class Player{
+    public:
+        Player();
+        void begin();
+        void play(char* name);
+
+    private:
+        void initPlayer();
+        void initSD();
+        void printDirectory(File dir, int numTabs);
+        File root;
+        char* name;
+    };
 
 class Joystick{
     public:

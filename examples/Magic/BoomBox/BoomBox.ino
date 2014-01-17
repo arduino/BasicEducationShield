@@ -1,34 +1,46 @@
 /*
-*Time to practice your DJ skills with the magic BoomBox!
-*Record some wav sound, save them in the SD card,
-*and you have a fun instrument for messing around with sound.
-*Bring it to a party next time and you’ll be the super star!
+  Boom Box
+  
+  This is your first step towards theese kinds of skills:
+  http://www.youtube.com/watch?v=FcJCxe1VSLA&noredirect=1
+  The boom box is a small sample player you can use to make music, 
+  or just random sound. It comes with three prerecorded samples 
+  but we probably donâ€™t have the same creative cleverness when it
+  comes to recording as you do so you should definitely record your 
+  own samples too! 
+  
+  (c) 2013 Arduino Verkstad
 */
 
-#include <BasicEducationShield.h>
+#include "BasicEducationShield.h"
 
-//We need this library for playing sound
-#include <SoundWave.h>
-
-//Declare the sound player
-SoundWave player;
+//We need to include the SD library to be able to read from an SD card
+#include <SD.h>
 
 //Declare a button group with 3 buttons. The
-//sound player secrectly takes pin 3 and 11,
-//so don't use them
+//sound player secrectly takes pin 3, 4 and 11,
+//so don't use them,
 ButtonGroup bg;
-int buttons[]={4,5,6};
+int buttons[]={5,6,7};
+
 //There're 3 buttons in the button group.
 int buttonsCount=3;
 
+//Declare the sound player
+Player player=Player();
+
 void setup(){
+  // Open serial communications and wait for port to open:
   Serial.begin(9600);
-  //Initialize the sound player
+  
+  // Initialize the sound player. Open the serial monitor to see
+  //the sound files found on your micro SD card
   player.begin();
+
   //Initialize the button group.
   bg.begin(buttonsCount,buttons);
-
 }
+
 void loop(){
   //Wait for one of the buttons to be pressed.
   //According to which button is pressed, it
@@ -39,21 +51,18 @@ void loop(){
   //button pressed.
   switch(pressedButton){
     case 0:
+      Serial.println("sound 0");
       player.play("0.wav");
       break;
     case 1:
+      Serial.println("sound 1");
       player.play("1.wav");
       break;
     case 2:
+      Serial.println("sound 2");
       player.play("2.wav");
       break;
   }
 
-  //Keep the program waiting while the sound is
-  //being played, otherwise there'll be no sound!
-  while(player.isplaying){
-
-  }
 }
-
 
