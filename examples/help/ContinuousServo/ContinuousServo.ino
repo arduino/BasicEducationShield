@@ -25,7 +25,7 @@ void setup(){
 
 void loop(){
   //write(speed):
-  //	speed: the angle to which you want to rotate
+  //	speed: the speed in which you want to rotate
   //	the servo. It is ranged between 0 and 180.
   //    180 is fastet speed in one direction and 0 
   //    fastest speed in the opposite direction. 
