@@ -2,9 +2,10 @@
 *
 *	For playing sound with a piezo.
 *
-*	Connect the red pin of piezo to a digital pin(8 in this example)
-*	and the black pin to ground.
+*	Connect the one pin of the piezo to a digital pin 
+*       (8 in this example) and the other pin to ground.
 *
+*       (c) 2013 Arduino Verkstad
 */
 #include <BasicEducationShield.h>
 
@@ -17,6 +18,7 @@ Melody me=Melody(8);
 
 void setup(){
 }
+
 void loop(){
   //Defining the notes used in the music. No more than 30.
   int notes[] = {

@@ -13,14 +13,15 @@
 *	it "baseValue").
 *
 *	Now cover the sensor with desired object. When the value
-*	gets stable, take note of it(topValue). Pick a value between
-*	this and the "baseValue", remember it as the "threshold".
+*	gets stable, take note of it(topValue). Remembe these values
+*       and use them when configuring.
 *
 *	"baseValue" and "threshold" will be used for defining the
 *	LDR switch in your project. You can fine tune the threshold
 *	to make the sensor more/less sensitive. The closer to
 *	baseValue, the more sensitive it is.
-*
+*  
+*       (c) 2013 Arduino Verkstad
 */
 #include <BasicEducationShield.h>
 

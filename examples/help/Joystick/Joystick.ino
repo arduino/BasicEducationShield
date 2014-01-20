@@ -1,4 +1,8 @@
 /*	Joystick
+*       The joystick is one component but uses two analog sensors and 
+*       gives you two values. One x value and one y value. The value 
+*       for each direction is zero if it’s in the middle, -1 on one side 
+*       and 1 on the other side. 
 *
 *	The joystick returns the position it is being pushed to.
 *       It returns two values, one X value and one Y value. That is the
@@ -8,6 +12,7 @@
 *       position is left top, x=0 and y=-1 means that the position is
 *       middle bottom.
 *
+*       (c) 2013 Arduino Verkstad
 */
 
 #include <BasicEducationShield.h>

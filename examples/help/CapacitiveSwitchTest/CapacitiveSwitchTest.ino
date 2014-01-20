@@ -12,6 +12,7 @@
 *	It can also be used for adjusting the threshold when using
 *	capacitive sensor as a button.
 *
+*       (c) 2013 Arduino Verkstad
 */
 
 #include <CapacitiveSensor.h>
@@ -26,6 +27,5 @@ void setup(){
 void loop(){
   //Print out the value of the sensor
   me.test();
-
   delay(30);
 }

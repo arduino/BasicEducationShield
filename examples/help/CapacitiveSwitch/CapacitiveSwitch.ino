@@ -2,7 +2,7 @@
 *
 *	CapacitiveSwitch can be constructed in various ways.
 *	Typically a 1 million ohm resistor between sender pin
-*	and receiver pin(we use 13 as sender, 12 as receiver
+*	and receiver pin(we use 3 as sender, 2 as receiver
 *	here), and conductive material connected to receive
 *	pin.
 *
@@ -13,7 +13,7 @@
 *	The library includes some features for using the
 *	capacitive sensor as a button, or get values directly.
 *
-*
+*       (c) 2013 Arduino Verkstad
 */
 
 //Always import CapacitiveSensor.h when using CapacitiveSwitch

@@ -2,15 +2,16 @@
 *
 *	Piezo can play music, as well as used as knock sensor.
 *
-*	Connect the red pin of piezo to an analog pin(A5 in
-*	this example), black pin to GND. Connect a 1m ohm
-*	resistor parallel with the piezo.
-*
+*	Connect the redone pin of the piezo to an analog pin
+*       (A5 in this example), the other pin to GND. Connect a 
+*       1m ohm resistor parallel with the piezo.
+*       
+*       (c) 2013 Arduino Verkstad
 */
 
 #include <BasicEducationShield.h>
 
-//Be careful: Piezo as speaker is connected to digital pin
+//Remember: Piezo as speaker is connected to digital pin
 //while piezo as knock sensor is connected to analog pin.
 PiezoKnockSensor sensor=PiezoKnockSensor(A0);
 

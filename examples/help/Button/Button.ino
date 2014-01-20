@@ -1,7 +1,10 @@
-/*	Button
-*
-*	Convenient for detecting clicking of a button.
-*
+/*	
+  Button
+  A button is a digital input. This means that it can have two 
+  states, either HIGH (5V) or LOW (0V). When you connect a button 
+  to your Arduino board you can read these states as 1 or 0. 
+  
+  (c) 2013 Arduino Verkstad
 */
 
 #include <BasicEducationShield.h>

@@ -9,6 +9,8 @@
 
 #include "../CapacitiveSensor/CapacitiveSensor.h"
 #include "../Servo/Servo.h"
+#include "../SD/utility/SdFat.h"
+#include "../SD/utility/SdFatUtil.h"
 #include "../SD/SD.h"
 
 

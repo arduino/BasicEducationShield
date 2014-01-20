@@ -1,12 +1,15 @@
 /*  TiltSwitch
 *
-*  Convenient for detecting if a tilt switch is tilted.
+*  Tilt Switch is a component that detects if it’s right side up
+*  or tilted.
 *
+*  (c) 2013 Arduino Verkstad
 */
+
 #include <BasicEducationShield.h>
 
 //Declare the tilt switch. A TinkerKit tilt switch can be
-//connected to TinkerKit port digital 10 or 9(We use 10 here).
+//connected to D10 or D9 (We use D10 here).
 TiltSwitch me=TiltSwitch(10);
 
 void setup(){

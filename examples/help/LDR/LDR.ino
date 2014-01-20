@@ -1,3 +1,20 @@
+/*
+LDR
+
+LDR is a sensor that reads the intensity of light. It gives 
+analog reading. When connected with Arduino analog pins, 
+its value ranges from 0 to 1023 depending on the amount of 
+light shining on it. 
+
+The BasicEducationShield library includes some features for 
+using the LDR as a button, or get values directly. Se the 
+example LDRtest fo more information about how to configure
+it correctly. 
+
+(c) 2013 Arduino Verkstad
+*/
+
+
 #include <BasicEducationShield.h>
 
 //Tinkerkit LDR is connected to analog 1.

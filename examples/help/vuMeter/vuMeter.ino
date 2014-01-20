@@ -1,20 +1,21 @@
-/*	VU-Meter
-*
-*	VU-Meter is a few LEDs grouped together into a line.
-*
-*	LEDs are connected to Arduino in such way: The long
-*	leg is connected to a 220 ohm resistor to a digital
-*	pin, the short leg is connected to GND.
-*
-*	When a few LEDs are used as VU-Meter, the short legs
-*	are typically connected together, then to a GND pin
-*	on Arduino.
-*
-*	This library has some of the most often used feature
-*	for controlling LEDs, can be used as a score board,
-*	conveniently managing the LEDs in a project, or even
-*	being used as the major part of a game.
-*
+/*	
+  VU-Meter
+  VU-Meter is a few LEDs grouped together into a line.
+  
+  This library has some features that makes it easy to control 
+  several LEDs. Functions to use are:
+  
+      clear() - turns all LEDs off.
+      on(LEDindex) - turns one LED on
+      off(LEDindex) - turns one LED off
+      scrollRight(speed, startIndex) - one LED light up at a time from left to right
+      scrollLeft(speed, startIndex) - one LED light up at a time from right to left
+      blink(LEDindex,speed, times) - one LED blinks
+      blinkAll(speed, times) - all LEDs blink
+      fillFrom(startIndex, stopIndex) - turns LEDs from startIndex to stopIndex on
+      fill(numberOfLEDs) - turns LEDs on from first to numberOfLEDs 
+  
+  (c) 2013 Arduino Verkstad
 */
 
 #include <BasicEducationShield.h>
@@ -27,7 +28,7 @@ VUMeter me;
 //number of LEDs are changed.
 int pins[]={2,3,4,5,6};
 
-//How many pins are used. Should refect the pins array above.
+//How many pins are used. Should reflect the pins array above.
 int pinCount=5;
 
 void setup(){
@@ -40,7 +41,7 @@ void setup(){
 }
 void loop(){
   //fill(number)
-  //  number: how many leds from left shall be light up
+  //  number: how many leds from first pin shall be turned on
   //
   //Fill 5 LEDs
   me.fill(5);
