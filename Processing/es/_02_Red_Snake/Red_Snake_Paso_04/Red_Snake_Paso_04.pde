@@ -1,12 +1,6 @@
 /*
- * Red Snake (Serpiente Roja)
- *
- * Programa para crear una serpiente roja moviendose por la pantalla
- * 
- * Paso 4:
- *  - cambia la intensidad del rojo en funcion del tiempo
- *
- * (c) 2013 D. Cuartielles, Arduino Verkstad, Suecia 
+ * Red Snake (Serpiente Roja) 
+ * Paso 4
  */
 
 int rojo = 255;

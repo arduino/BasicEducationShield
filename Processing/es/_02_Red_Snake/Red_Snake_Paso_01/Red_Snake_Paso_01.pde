@@ -1,14 +1,6 @@
 /*
  * Red Snake (Serpiente Roja)
- *
- * Programa para crear una serpiente roja moviendose por la pantalla
- * 
- * Paso 1:
- *  - crea un programa en una ventana de 400x400 pixels
- *  - dibuja un circulo rojo de 30 pixels de diametro
- *  - haz que el dibujo no tenga borde, usa el comando 'noStroke()'
- *
- * (c) 2013 D. Cuartielles, Arduino Verkstad, Suecia 
+ * Paso 1
  */
  
 void setup() {

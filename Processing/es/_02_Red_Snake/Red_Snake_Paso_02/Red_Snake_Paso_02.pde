@@ -1,13 +1,6 @@
 /*
  * Red Snake (Serpiente Roja)
- *
- * Programa para crear una serpiente roja moviendose por la pantalla
- * 
- * Paso 2:
- *  - haz que el circulo se mueva en funcion de las coordenadas del
- *    raton (usa 'mouseX' y 'mouseY')
- *
- * (c) 2013 D. Cuartielles, Arduino Verkstad, Suecia 
+ * Paso 2
  */
  
 void setup() {
