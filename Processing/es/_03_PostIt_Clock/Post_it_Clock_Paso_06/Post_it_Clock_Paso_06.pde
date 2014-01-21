@@ -1,22 +1,5 @@
 /**
- * Post-it Clock (Reloj de Post-it) 
- * 
- * El objetivo de este proyecto es crear un reloj usando imagenes para
- * representar los numeros. 
- *
- * Paso 6:
- *  - crea imagenes que representen numeros (por si acaso, aqui tienes unas
- *    hechas con post-it)
- *  - modifica el programa para que muestre todos los numeros del 0 al 9
- *  - puedes usar 'for()' para mostrar las imagenes
- *  - este programa te servira como base para cualquier programa donde quieras
- *    representar numeros, si por ejemplo quieres mostrar el 5 en la pantalla,
- *    solo tienes que invocar 'image(img[5], coorX, coorY)'
- *
- *  Nota: como quieres mostrar todos los numeros, tendras que hacer imagenes mas
- *        pequeñas, por ejemplo de 70 pixels de ancho
- *  
- * (c) 2013 D. Cuartielles, Arduino Verkstad, Suecia 
+ * Paso 6
  */
 
 PImage im[] = new PImage[10];   // Array para 10 imagenes

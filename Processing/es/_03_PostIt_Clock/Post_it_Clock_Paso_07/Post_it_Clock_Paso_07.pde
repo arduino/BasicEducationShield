@@ -1,16 +1,5 @@
 /**
- * Post-it Clock (Reloj de Post-it) 
- * 
- * El objetivo de este proyecto es crear un reloj usando imagenes para
- * representar los numeros. 
- *
- * Paso 7:
- *  - toma la hora del ordenador y representala con las imagenes
- *  - la hora del sistema se obtiene con la funcion 'hour()'
- *  - ten en cuenta que la hora tiene dos digitos y por lo tanto
- *    tienes que buscar la forma de separarlos
- *
- * (c) 2013 D. Cuartielles, Arduino Verkstad, Suecia 
+ * Paso 7
  */
 
 PImage im[] = new PImage[10];   // Array para 10 imagenes

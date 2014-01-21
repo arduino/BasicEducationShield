@@ -1,18 +1,5 @@
 /**
- * Post-it Clock (Reloj de Post-it) 
- * 
- * El objetivo de este proyecto es crear un reloj usando imagenes para
- * representar los numeros. 
- *
- * Paso 2:
- *  - modifica el programa para que muestre dos imagenes
- *  - necesitaras dos variables, una para cada imagen
- *  - la funcion 'imgage()' usa coordenadas, muestra las imagenes una junto a otra
- *  - incluye la segunda imagen en el progama arrastrandola sobre el IDE
- *
- *  Nota: si tus imagenes son de 400x400, necesitaras un programa de 800x400 pixels
- *
- * (c) 2013 D. Cuartielles, Arduino Verkstad, Suecia 
+ * Paso 2
  */
 
 PImage im;
