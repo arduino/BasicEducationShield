@@ -1,21 +1,5 @@
 /*
- * Catch the Apple (Caza la Manzana)
- *
- * Creacion de un videojuego con Processing. El objetivo de este ejercicio es
- * llevar la programacion un poco mas lejos y crear un pequeño videojuego donde
- * nuestro aguerrido heroe, el famoso cientifico Newton, intenta no perder la
- * oportunidad de que la manzana le caiga en la cabeza.
- *
- * Paso 12:
- *  - incluye imagenes para la manzana, el fondo y Newton
- *  - puedes hacer las imagenes tu mismo, buscarlas de internet,
- *    o usar las que te pasamos
- *  - es importante que las imagenes sean de tipo PNG si quieres
- *    que haya transparencia entre las imagenes y el fondo
- *  - ten en cuenta que, al cambiar las formas por imagenes, las proporciones
- *    tambien cambian, tendras que hacer encajar esos valores en tu diseño
- *
- * (c) 2013 D. Cuartielles, Arduino Verkstad, Suecia
+ * Paso 12
  */
  
 String[] imFiles = {"fondo.png", "manzana.png", "newton1.png", "newton2.png"};

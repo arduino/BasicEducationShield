@@ -1,21 +1,5 @@
 /*
- * Catch the Apple (Caza la Manzana)
- *
- * Creacion de un videojuego con Processing. El objetivo de este ejercicio es
- * llevar la programacion un poco mas lejos y crear un pequeño videojuego donde
- * nuestro aguerrido heroe, el famoso cientifico Newton, intenta no perder la
- * oportunidad de que la manzana le caiga en la cabeza.
- *
- * Paso 6:
- *  - detecta que la manzana aterriza en la cabeza de Newton para poder contar
- *    puntos; la accion de detectar que dos objetos se encuentran en la pantalla
- *    se llama "deteccion de colision"
- *  - emplea las funciones condicionales 'if-else' para ver si el circulo
- *    esta sobre el cuadrado, de ser asi, cambia el color del cuadro a rojo
- *  - para hacer el programa mas sencillo, crea una variable para almacenar las 
- *    coordenadas en Y del cuadrado
- *
- * (c) 2013 D. Cuartielles, Arduino Verkstad, Suecia
+ * Paso 6
  */
  
 int nX = 0;

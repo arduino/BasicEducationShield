@@ -1,17 +1,5 @@
 /*
- * Catch the Apple (Caza la Manzana)
- *
- * Creacion de un videojuego con Processing. El objetivo de este ejercicio es
- * llevar la programacion un poco mas lejos y crear un pequeño videojuego donde
- * nuestro aguerrido heroe, el famoso cientifico Newton, intenta no perder la
- * oportunidad de que la manzana le caiga en la cabeza.
- *
- * Paso 4:
- *  - modifica el programa para hacer que la manzana caiga
- *  - necesitaras una variable para contener la coordenada Y de la manzana
- *  - cuando la manzana toque el suelo, deberas volver a "colgarla" del arbol
- *
- * (c) 2013 D. Cuartielles, Arduino Verkstad, Suecia
+ * Paso 4
  */
  
 int nX = 0;

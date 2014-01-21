@@ -1,19 +1,5 @@
 /*
- * Catch the Apple (Caza la Manzana)
- *
- * Creacion de un videojuego con Processing. El objetivo de este ejercicio es
- * llevar la programacion un poco mas lejos y crear un pequeño videojuego donde
- * nuestro aguerrido heroe, el famoso cientifico Newton, intenta no perder la
- * oportunidad de que la manzana le caiga en la cabeza.
- *
- * Paso 9:
- *  - implementa un contador que muestre cuantas manzanas cogio Newton
- *  - la funcion 'text()' te permite poner texto en el programa
- *  - ademas necesitaras un contador para poner los puntos 
- *  - empiezas a tener muchas variables en tu programa, es considerado buena
- *    practica el poner comentarios para explicar cada una 
- *
- * (c) 2013 D. Cuartielles, Arduino Verkstad, Suecia
+ * Paso 9
  */
  
 int nX = 0;      // Coordenada X, Newton

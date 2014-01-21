@@ -1,19 +1,5 @@
 /*
- * Catch the Apple (Caza la Manzana)
- *
- * Creacion de un videojuego con Processing. El objetivo de este ejercicio es
- * llevar la programacion un poco mas lejos y crear un pequeño videojuego donde
- * nuestro aguerrido heroe, el famoso cientifico Newton, intenta no perder la
- * oportunidad de que la manzana le caiga en la cabeza.
- *
- * Paso 3:
- *  - limita el movimiento de Newton dentro de la ventana
- *  - para esto vas a usar las funciones condicionales 'if-else'
- *  - comprobaras que la coordenada nX esta siempre dentro de la
- *    ventana del programa, es decir, habra de ser mayor que 0 y
- *    menor que la anchura de la ventana o 'width'
- *
- * (c) 2013 D. Cuartielles, Arduino Verkstad, Suecia
+ * Paso 3
  */
  
 int nX = 0;

@@ -1,20 +1,5 @@
 /*
- * Catch the Apple (Caza la Manzana)
- *
- * Creacion de un videojuego con Processing. El objetivo de este ejercicio es
- * llevar la programacion un poco mas lejos y crear un pequeño videojuego donde
- * nuestro aguerrido heroe, el famoso cientifico Newton, intenta no perder la
- * oportunidad de que la manzana le caiga en la cabeza.
- *
- * Paso 2:
- *  - haz que Newton (el cuadrado) se mueva con las flechas del teclado
- *  - el teclado se llama 'keyboard' en ingles, y las teclas 'keys'
- *  - cada tecla tiene un 'keyCode', es el valor o codigo del simbolo que representa
- *  - para ver que tecla se presiono, crea una funcion llamada 'keyPressed()'
- *  - para mover el cuadro necesitaras una variable para almacenar su coordenada
- *    en el eje X (horizontal)
- *
- * (c) 2013 D. Cuartielles, Arduino Verkstad, Suecia
+ * Paso 2
  */
  
 int nX = 0;

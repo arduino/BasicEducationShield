@@ -1,22 +1,5 @@
 /*
- * Catch the Apple (Caza la Manzana)
- *
- * Creacion de un videojuego con Processing. El objetivo de este ejercicio es
- * llevar la programacion un poco mas lejos y crear un pequeño videojuego donde
- * nuestro aguerrido heroe, el famoso cientifico Newton, intenta no perder la
- * oportunidad de que la manzana le caiga en la cabeza.
- *
- * Paso 10:
- *  - los puntos se estan contabilizando extra, corrigelo
- *  - esto lo podras conseguir de dos formas:
- *    + volviendo a lanzar la manzana en cuanto se detecte colision, o
- *    + dejando de contar una vez hay colision y hasta que se lance una
- *      nueva manzana
- *  - en cualquier caso, necesitas una variable de tipo 'boolean' que 
- *    almacenara el estado de poder contar o no puntos, la tendras que
- *    reiniciar a 'true' cada vez que se lance la manzana de nuevo
- *
- * (c) 2013 D. Cuartielles, Arduino Verkstad, Suecia
+ * Paso 10
  */
  
 int nX = 0;      // Coordenada X, Newton
