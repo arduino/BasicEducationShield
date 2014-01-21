@@ -1,21 +1,11 @@
 /*
- Wheels
- 
- If you ever want to use two continuous rotation servos as a pair
- of wheels we've made it easy for you. 
- 
- (c) 2013 Arduino Verkstad
+  Wheels
 */
 
 #include <BasicEducationShield.h>
-
-//Servo.h is necessary to be included here
 #include <Servo.h>
 
-//Wheels(left, right)
-//  Declares the wheels.
-//  left: the digital pin where you connect the left wheel
-//  right: the digital pin where you connect the right wheel
+//wheels(left, right)
 Wheels wheels=Wheels(10, 9);
 
 void setup(){
