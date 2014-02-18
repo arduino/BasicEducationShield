@@ -1,4 +1,5 @@
 #include "BasicEducationShield.h"
+#include "pitches.h"
 
 #if ARDUINO >= 100
 #include "Arduino.h"
@@ -37,6 +38,25 @@ void Melody::playTone(int note,int length){
 	//Play a certain tone. Much more flexible than defined notes.
 	tone(pin,note,length+5);
 	delay(length);
+}
+
+void Melody::effect_win(){
+	int melody[] = { NOTE_C5, NOTE_G4,NOTE_G4, NOTE_A4, NOTE_G4, 0, NOTE_B4, NOTE_C5};
+	int noteDurations[] = { 4, 8, 8, 4,4,4,4,4 };
+	int numberOfNotes = 8;
+	this->play(numberOfNotes, melody, noteDurations, 1);
+}
+void Melody::effect_gameover(){
+	int melody[] = { NOTE_E2, NOTE_C2};
+	int noteDurations[] = { 2, 1};
+	int numberOfNotes = 2;
+	this->play(numberOfNotes, melody, noteDurations, 1);
+}
+void Melody::effect_score(){
+    int melody[] = { NOTE_GS4, NOTE_C5};
+    int noteDurations[] = { 8, 8};
+    int numberOfNotes = 2;
+    this->play(numberOfNotes, melody, noteDurations, 1);
 }
 
 /*

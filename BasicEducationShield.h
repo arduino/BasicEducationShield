@@ -48,6 +48,10 @@ class Melody{
 		void play(int length, int notes[],int diration[], float speed=1.3);
 		void beep(int note=20, int length=30);
 		void playTone(int note, int length=10);
+		
+		void effect_win();
+		void effect_gameover();
+		void effect_score();
 
 	private:
 		int pin;
@@ -151,6 +155,17 @@ class Player{
         File root;
         char* name;
     };
+
+class Knob{
+	public:
+		Knob(int pin);
+		int getValue();
+		void setLevels(int levels);
+		int getLevel();
+	private:
+		int pin;
+		int levels;
+};
 
 class Joystick{
     public:
