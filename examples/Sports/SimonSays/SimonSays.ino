@@ -11,7 +11,7 @@ VUMeter vuMeter;
 
 Knob pot=Knob(A0);//a knob is connected to A0
 
-Button button = Button(7); //a button is connected to digital pin 7
+Button button = Button(9); //a button is connected to digital pin 7
 
 Melody piezo=Melody(8);//a piezo is connected to digital pin 8
 
@@ -41,6 +41,9 @@ void loop(){
 }
 
 void newGame(){
+  vuMeter.blinkAll(200, 3);
+  vuMeter.clear();
+  delay(500);
   //Generate simon says, it'll be stored in an array
   //So we can compare with player's input later
   for(int i=0;i<turns;i++){
@@ -49,7 +52,6 @@ void newGame(){
 }
 void simonSays(){
   //Display simon says to the player. 
-  vuMeter.clear();
   for(int i=0;i<turns;i++){
     vuMeter.on(game[i]);
     delay(blinkTime);
