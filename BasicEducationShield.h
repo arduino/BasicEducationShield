@@ -48,7 +48,7 @@ class Melody{
 		void play(int length, int notes[],int diration[], float speed=1.3);
 		void beep(int note=20, int length=30);
 		void playTone(int note, int length=10);
-		
+
 		void effect_win();
 		void effect_gameover();
 		void effect_score();
@@ -195,6 +195,18 @@ class Wheels{
         int toL, toR;
         int tl, tr;
     };
+
+class IRArray{
+    public:
+        IRArray(int lpin=A1, int mpin=A2, int rpin=A3);
+        int readBinary();
+    private:
+        int lpin, mpin, rpin;
+        int sensPins[3];
+        int sensorVal[3];
+        int toBinary[3];
+        int translateBinary();
+};
 
 
 #endif
