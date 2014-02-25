@@ -186,6 +186,7 @@ class Wheels{
         void turnLeft();
         void turnRight();
         void standStill();
+        void follow(int d);
     private:
         int top, low, still;
         void go(int tl, int tr);
@@ -196,16 +197,26 @@ class Wheels{
         int tl, tr;
     };
 
+#define KP 9
+#define KD 1
+#define LINE_THRESSHOLD 30
+#define ROBOT_SPEED 50 //In % [0..100]
+#define INTEGRATION_TIME 10
+
 class IRArray{
     public:
         IRArray(int lpin=A1, int mpin=A2, int rpin=A3);
         int readBinary();
+        int readLine();
     private:
         int lpin, mpin, rpin;
         int sensPins[3];
         int sensorVal[3];
         int toBinary[3];
         int translateBinary();
+        int calculateVelocity(int s);
+        int last_diff;
+
 };
 
 

@@ -76,5 +76,20 @@ void Wheels::standStill(){
   go(toL, toR);
 }
 
+void Wheels::follow(int d){
+    int leftSpeed = constrain(ROBOT_SPEED+d, -100, 100);
+    int rightSpeed = constrain(ROBOT_SPEED-d, -100, 100);
+
+    leftSpeed = map(-leftSpeed, -100, 100, 40, 140);
+    rightSpeed = map(rightSpeed, -100, 100, 40, 140);
+
+    Serial.print(leftSpeed);
+    Serial.print("  ");
+    Serial.println(rightSpeed);
+
+    left.write(leftSpeed);
+    right.write(rightSpeed);
+}
+
 
 

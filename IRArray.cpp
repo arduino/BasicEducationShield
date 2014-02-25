@@ -40,4 +40,34 @@ int IRArray::translateBinary(){
   byte o = (toBinary[2]?1:0)|(toBinary[1]?2:0)|(toBinary[0]?4:0);
   return o;
 }
-;
+
+int IRArray::readLine(){
+    int sum=0;
+        for(int i=0; i<3; i++){
+        int reading = constrain(analogRead(sensPins[i]), 60, 400);
+
+        sensorVal[i]=map(reading,60,400,0,127);
+        sum+=sensorVal[i];
+        //Serial.println(sum);
+    }
+    int vel = 0;
+    if(sum>LINE_THRESSHOLD) vel = calculateVelocity(sum);
+
+    return vel;
+}
+
+int IRArray::calculateVelocity(int s){
+    s/=3;
+
+    int diff = ((sensorVal[0]<<5)-(sensorVal[2]<<5))/s;
+    diff = constrain(diff,-100,100);
+
+    int velocity = (diff * KP)/10 + (diff-last_diff)*KD;
+     velocity = constrain(velocity, -100, 100);
+    //Serial.println(velocity);
+    last_diff = diff;
+
+    delay(INTEGRATION_TIME);
+
+    return velocity;
+}
