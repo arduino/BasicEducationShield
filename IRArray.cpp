@@ -43,8 +43,9 @@ int IRArray::translateBinary(){
 
 int IRArray::readLine(){
     int sum=0;
-        for(int i=0; i<3; i++){
+    for(int i=0; i<3; i++){
         int reading = constrain(analogRead(sensPins[i]), 60, 400);
+        //int reading = constrain(analogRead(sensPins[i]), low[i], high[i]);
 
         sensorVal[i]=map(reading,60,400,0,127);
         sum+=sensorVal[i];
@@ -70,4 +71,15 @@ int IRArray::calculateVelocity(int s){
     delay(INTEGRATION_TIME);
 
     return velocity;
+}
+
+void IRArray::test(){
+    for(int i=0; i<3; i++) sensorVal[i] = constrain(analogRead(sensPins[i]), 60, 400);
+
+    Serial.print("IR1: ");
+    Serial.print(sensorVal[0]);
+    Serial.print("  IR2: ");
+    Serial.print(sensorVal[1]);
+    Serial.print("  IR3: ");
+    Serial.println(sensorVal[2]);
 }
