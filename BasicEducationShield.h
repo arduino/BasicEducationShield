@@ -205,11 +205,11 @@ class Wheels{
 
 class IRArray{
     public:
-        IRArray(int lpin=A1, int mpin=A2, int rpin=A3);
+        IRArray(int IR1=A1, int IR2=A2, int IR3=A3);
         int readBinary();
         int readLine();
     private:
-        int lpin, mpin, rpin;
+        int IR1, IR2, IR3;
         int sensPins[3];
         int sensorVal[3];
         int toBinary[3];

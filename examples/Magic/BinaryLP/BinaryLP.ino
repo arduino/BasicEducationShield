@@ -1,5 +1,12 @@
 /*
   Binary LP
+  This sort of works as an LP player. The difference is 
+  that instead of using a needle on a plastic disc, 
+  we use three IR sensors in a row to read a pattern from 
+  a paper disc. 
+  
+  If you are both musically and digitally inclined, 
+  you will have lots of fun creating melodies with this. 
   
   (c) 2014 Arduino Verkstad
 */
@@ -12,27 +19,25 @@
 IRArray ir = IRArray(A1, A2, A3);
 
 int piezo = 8; //Piezo pin
-int lastByte = 0; 
+int lastReading = 0; 
 
 void setup(){
-  Serial.begin(9600);
   pinMode(piezo, OUTPUT);
 }
 
 void loop(){
   //Read the binary pattern and get a number from 0 to 7
-  int readByte = ir.readBinary(); 
+  int reading = ir.readBinary(); 
   
   //Play a note depending on the read value
-  playNote(readByte);
-  
-  if(readByte) Serial.println(readByte);
+  playNote(reading);
+
 }
 
-void playNote(byte b){
+void playNote(int r){
   //If the last note we played is the same as the new note
   //we make a short break so that two notes are distinguished
-  if(lastByte==b){
+  if(lastReading==r){
     noTone(piezo);
     delay(20);
   }
@@ -40,7 +45,7 @@ void playNote(byte b){
   //Play a different note depending on the value of b.
   //Check pitches.h to see which notes you can use.
   //In this case the scale is C Major.
-  switch (b){
+  switch (r){
     case 0:
       break;
     case 1:
@@ -66,6 +71,6 @@ void playNote(byte b){
       break;   
   }
   
-  //If b is more than 0 we save that value to lastByte
-  if(b>0)lastByte = b;
+  //If r is more than 0 we save that value to lastByte
+  if(r>0)lastReading = r;
 }

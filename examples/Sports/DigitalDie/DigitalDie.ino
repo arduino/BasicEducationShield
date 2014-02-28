@@ -1,3 +1,17 @@
+/*
+  Digital Die
+  
+  Use this digital die next time you play a board game. 
+
+  You "throw" the die by shaking a tilt sensor. The LEDs 
+  will show different numbers, waiting a longer and longer 
+  time for each number,  until it finally stops. Don't be 
+  too fast to cheer believing it stopped on your desired 
+  number or you might get disappointed ...
+
+  (c) 2014 Arduino Verkstad  
+*/
+
 #include <BasicEducationShield.h>
 
 //declare the pins used for leds, 9 leds in total
@@ -11,7 +25,7 @@ port 9
 TiltSwitch ts=TiltSwitch(9);
 
 /*
-  Define the patterns of dice values. Each pattern is
+  Define the patterns of die values. Each pattern is
   an array of 9 integers, indicating the on/off state
   of each led.
   And because there're 6 possible patterns, we need a 
@@ -64,7 +78,7 @@ int dice[6][9]={
 };
 
 /*
-  wait time between the dice rolls to a different face.
+  wait time between the die rolls to a different face.
   Notice it's using float type here? Read on!
 */
 float waitTime=1;

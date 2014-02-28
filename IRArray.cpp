@@ -5,13 +5,13 @@
 #include "WProgram.h"
 #endif
 
-IRArray::IRArray(int lpin, int mpin, int rpin){
-	this->lpin=lpin;
-	this->mpin=mpin;
-	this->rpin=rpin;
-	sensPins[0] = lpin;
-	sensPins[1] = mpin;
-	sensPins[2] = rpin;
+IRArray::IRArray(int IR1, int IR2, int IR3){
+	this->IR1=IR1;
+	this->IR2=IR2;
+	this->IR3=IR3;
+	sensPins[0] = IR1;
+	sensPins[1] = IR2;
+	sensPins[2] = IR3;
 	for(int i=0; i<3; i++){
       sensorVal[i]=0;
 	}

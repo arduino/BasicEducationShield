@@ -1,3 +1,13 @@
+/*
+  Sequencer
+  Play beats and change the sequence in real time. Basically 
+  all you need to become a hiphop artist. That, and rapping 
+  skills. But that's another course. 
+  
+  (c) 2014 Arduino Verkstad
+*/
+
+
 #include "BasicEducationShield.h"
 
 //We need to include the SD library to be able to read from an SD card
@@ -8,7 +18,7 @@ Player player=Player();
 
 //There're 4 slots for 4 sequences. We use 4 analog pins
 //to read them.
-int analog_pins[]={1,2,3,4};
+int analog_pins[]={4,3,2,1};
 int pin_count=4;
 
 //Template for the music file names.
@@ -34,8 +44,8 @@ void loop(){
     Serial.println(filename);
     //Play the file
     player.play(filename);
-
   }
+  
   //End of one loop
   Serial.println("=======");
 }
