@@ -22,7 +22,7 @@ VUMeter vuMeter;
 
 Knob pot=Knob(A0);//a knob is connected to A0
 
-Button button = Button(9); //a button is connected to digital pin 7
+Button button = Button(9); //a button is connected to port D9
 
 Melody piezo=Melody(8);//a piezo is connected to digital pin 8
 

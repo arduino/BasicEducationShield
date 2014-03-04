@@ -30,7 +30,7 @@ int IRArray::readBinary(){
 
         for(int i=0; i<3; i++){
             if(sensorVal[i]) toBinary[i]=1;
-            else if(!sensorVal[i]&&!sensorVal[i+1]&&!sensorVal[i+2]) check=false; //if all three are 0
+            else if(!sensorVal[0]&&!sensorVal[1]&&!sensorVal[2]) check=false; //if all three are 0
         }
     }
     return translateBinary();

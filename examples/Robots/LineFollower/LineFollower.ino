@@ -14,7 +14,7 @@
 
 //IRArray(IR1, IR2, IR3)
 IRArray ir = IRArray(A1, A2, A3);
-//(Wheels(left, right)
+//Wheels(left, right)
 Wheels wheels=Wheels(10, 9);
 
 void setup(){
