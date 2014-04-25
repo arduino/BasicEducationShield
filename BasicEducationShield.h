@@ -221,5 +221,13 @@ class IRArray{
 
 };
 
+class UltrasonicSensor{
+    public:
+        UltrasonicSensor(int trig=11, int echo=12);
+		int getDistance();
+    private:
+		int trig, echo;
+};
+
 
 #endif
