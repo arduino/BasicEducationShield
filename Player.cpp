@@ -43,7 +43,7 @@ void Player::play(char* name) {
     if (header <= 0) {
       header = 0;
       analogWrite(3, data);
-      delayMicroseconds(40);
+      delayMicroseconds(70);
     }
 
     // Prepare samples
