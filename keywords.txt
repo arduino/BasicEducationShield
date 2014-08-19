@@ -1,0 +1,90 @@
+#######################################
+# Syntax Coloring Map BasicEducationShield
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+VUMeter	KEYWORD1
+Melody	KEYWORD1
+Button	KEYWORD1
+LDR	KEYWORD1
+TiltSwitch	KEYWORD1
+CapacitiveSwitch	KEYWORD1
+LED	KEYWORD1
+PiezoKnockSensor	KEYWORD1
+Player	KEYWORD1
+Knob KEYWORD1
+Joystick	KEYWORD1
+Wheels	KEYWORD1
+IRArray	KEYWORD1
+UltrasonicSensor	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+config	KEYWORD2
+begin	KEYWORD2
+test	KEYWORD2
+getValue	KEYWORD2
+pressed	KEYWORD2
+released	KEYWORD2
+doublePressed	KEYWORD2
+getState	KEYWORD2
+
+### VUMeter ###
+on	KEYWORD2
+off	KEYWORD2
+scrollLeft	KEYWORD2
+scrollRight	KEYWORD2
+fill	KEYWORD2
+fillFrom	KEYWORD2
+blink	KEYWORD2
+blinkAll	KEYWORD2
+clear	KEYWORD2
+
+### Melody ###
+play	KEYWORD2
+beep	KEYWORD2
+playTone	KEYWORD2
+effect_win	KEYWORD2
+effect_gameover	KEYWORD2
+effect_score	KEYWORD2
+
+### Button ###
+pressed	KEYWORD2
+released	KEYWORD2
+doublePressed	KEYWORD2
+getState	KEYWORD2
+
+### PiezoKnockSensor ###
+knocked	KEYWORD2
+
+### Knob ###
+setLevels	KEYWORD2
+getLevels	KEYWORD2
+
+### Joystick ###
+getX	KEYWORD2
+getY	KEYWORD2
+
+### Wheels ###
+goForward	KEYWORD2
+goBackwards	KEYWORD2
+turnLeft	KEYWORD2
+turnRight	KEYWORD2
+standStill	KEYWORD2
+follow	KEYWORD2
+
+### IRArray ###
+readBinary	KEYWORD2
+readLine	KEYWORD2
+
+### UltrasonicSensor ###
+getDistance	KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
