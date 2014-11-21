@@ -14,7 +14,7 @@
 #include <SD.h>
 
 //Declare the sound player
-Player player=Player();
+Player player;
 
 //There're 4 slots for 4 sequences. We use 4 analog pins
 //to read them.
