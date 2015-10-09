@@ -6,13 +6,13 @@
 # Datatypes (KEYWORD1)
 #######################################
 
+EducationShield	KEYWORD1
 VUMeter	KEYWORD1
 Melody	KEYWORD1
 Button	KEYWORD1
 LDR	KEYWORD1
 TiltSwitch	KEYWORD1
 CapacitiveSwitch	KEYWORD1
-LED	KEYWORD1
 PiezoKnockSensor	KEYWORD1
 Player	KEYWORD1
 Knob KEYWORD1
@@ -20,6 +20,7 @@ Joystick	KEYWORD1
 Wheels	KEYWORD1
 IRArray	KEYWORD1
 UltrasonicSensor	KEYWORD1
+Knob	KEYWORD1
 
 #######################################
 # Methods and Functions (KEYWORD2)
@@ -64,7 +65,7 @@ knocked	KEYWORD2
 
 ### Knob ###
 setLevels	KEYWORD2
-getLevels	KEYWORD2
+getLevel	KEYWORD2
 
 ### Joystick ###
 getX	KEYWORD2
