@@ -7,7 +7,7 @@
   drawing a picture or by touching the tip of it to different
   conductive things around you. 
   
-  (c) 2013 Arduino Verkstad
+  (c) 2013 Arduino LLC
   Inspiration from Jay Siver's DRAWDIO
   http://web.media.mit.edu/~silver/drawdio/
 

@@ -8,7 +8,7 @@
   Players must press the button at the right time in order to 
   return the pong. 
   
-  (c) 2013 Arduino Verkstad
+  (c) 2013 Arduino LLC
 */
 
 #include <BasicEducationShield.h>

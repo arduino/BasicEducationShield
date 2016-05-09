@@ -11,7 +11,7 @@
   calculate the distance. The shorter time it takes to detect 
   the echo, the closer the object is. 
 
-  (c) 2014 Arduino Verkstad
+  (c) 2014 Arduino LLC
 */
 
 #include <BasicEducationShield.h>

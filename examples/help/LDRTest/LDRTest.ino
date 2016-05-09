@@ -21,7 +21,7 @@
 *	to make the sensor more/less sensitive. The closer to
 *	baseValue, the more sensitive it is.
 *  
-*       (c) 2013 Arduino Verkstad
+*       (c) 2013 Arduino LLC
 */
 #include <BasicEducationShield.h>
 

@@ -5,7 +5,7 @@
   electronics. Oh, and it automatically opens when you 
   knock on it. 
   
-  (c) 2013 Arduino Verkstad
+  (c) 2013 Arduino LLC
 */
 
 #include <BasicEducationShield.h>

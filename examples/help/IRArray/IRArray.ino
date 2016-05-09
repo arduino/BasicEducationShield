@@ -13,7 +13,7 @@
   to either change the analog pins in the code or change the 
   connections to the analog pins on the Arduino. 
   
-  (c) 2014 Arduino Verkstad
+  (c) 2014 Arduino LLC
 */
 
 #include <BasicEducationShield.h>

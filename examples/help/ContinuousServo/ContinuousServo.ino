@@ -8,7 +8,7 @@
 *       To control two servos as wheels on a vehicle please see the 
 *       example Wheels in the help folder.
 *
-*       (c) 2013 Arduino Verkstad
+*       (c) 2013 Arduino LLC
 */
 
 #include <BasicEducationShield.h>

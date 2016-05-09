@@ -12,7 +12,7 @@
   visible in a dark place so if you’re running, make sure not 
   to run in to a tree or a friend. 
   
-  (c) 2013 Arduino Verkstad
+  (c) 2013 Arduino LLC
 */
 
 #include <BasicEducationShield.h>

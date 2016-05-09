@@ -7,7 +7,7 @@
   in order to run laps. One LED will light up per lap. 
   When all laps are completed, LEDs will blink in victory. 
   
-  (c) 2013 Arduino Verkstad
+  (c) 2013 Arduino LLC
 */
 
 #include <CapacitiveSensor.h>

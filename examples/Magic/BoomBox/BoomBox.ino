@@ -9,7 +9,7 @@
   comes to recording as you do so you should definitely record your 
   own samples too! 
   
-  (c) 2013 Arduino Verkstad
+  (c) 2013 Arduino LLC
 */
 
 #include "BasicEducationShield.h"

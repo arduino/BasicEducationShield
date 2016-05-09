@@ -13,7 +13,7 @@
 *	The library includes some features for using the
 *	capacitive sensor as a button, or get values directly.
 *
-*       (c) 2013 Arduino Verkstad
+*       (c) 2013 Arduino LLC
 */
 
 //Always import CapacitiveSensor.h when using CapacitiveSwitch

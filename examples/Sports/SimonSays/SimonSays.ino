@@ -6,7 +6,7 @@
   LEDs will blink in a pattern that you have to remember and repeat. 
   If you get it right, the game gets more and more challenging. 
   
-  (c) 2014 Aduino Verkstad
+  (c) 2014 Aduino LLC
 */
 
 #include <BasicEducationShield.h>

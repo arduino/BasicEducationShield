@@ -5,7 +5,7 @@
   In this game, two players will hold tilt switch swords. 
   When the green LED randomly lights up, the first person 
   to swing their sword wins. 
-  (c) 2013 Aduino Verkstad
+  (c) 2013 Aduino LLC
 */
 
 #include <BasicEducationShield.h>

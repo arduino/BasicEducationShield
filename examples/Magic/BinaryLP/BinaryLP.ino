@@ -8,7 +8,7 @@
   If you are both musically and digitally inclined, 
   you will have lots of fun creating melodies with this. 
   
-  (c) 2014 Arduino Verkstad
+  (c) 2014 Arduino LLC
 */
 
 

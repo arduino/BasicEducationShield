@@ -4,7 +4,7 @@
   it follows a line. Make it go where ever you want by 
   showing the way with a 3 cm wide, black line. 
   
-  (c) 2014 Arduino Verkstad
+  (c) 2014 Arduino LLC
 */
 
 

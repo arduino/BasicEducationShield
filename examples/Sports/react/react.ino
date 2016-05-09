@@ -6,7 +6,7 @@
   You must tap the corresponding capacitive sensor as quick 
   as possible. If you don’t react fast enough, the game is over. 
   
-  (c) 2013 Arduino Verkstad
+  (c) 2013 Arduino LLC
 */
 
 #include <CapacitiveSensor.h>

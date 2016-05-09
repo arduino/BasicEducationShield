@@ -9,7 +9,7 @@
   You need to run the processing sketch included in the sketch folder
   to be able to take photos with a webcam connected to your computer.
   
-  (c) 2013 Arduino Verkstad
+  (c) 2013 Arduino LLC
 */
 
 #include <BasicEducationShield.h>

@@ -12,7 +12,7 @@
   Check out this secret knock detecting lock for some 
   inspiration: http://www.youtube.com/watch?v=zE5PGeh2K9k 
   
-  (c) 2013 Arduino Verkstad
+  (c) 2013 Arduino LLC
 */
 
 #include <BasicEducationShield.h>

@@ -11,7 +11,7 @@ using the LDR as a button, or get values directly. Se the
 example LDRtest fo more information about how to configure
 it correctly. 
 
-(c) 2013 Arduino Verkstad
+(c) 2013 Arduino LLC
 */
 
 

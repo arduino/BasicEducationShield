@@ -7,7 +7,7 @@
   into a cup. Make five points to win. The score is tracked 
   using a light dependent resistor (LDR).
   
-  (c) 2013 Arduino Verkstad
+  (c) 2013 Arduino LLC
 
 */
 

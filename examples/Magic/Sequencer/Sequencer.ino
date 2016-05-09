@@ -4,7 +4,7 @@
   all you need to become a hiphop artist. That, and rapping 
   skills. But that's another course. 
   
-  (c) 2014 Arduino Verkstad
+  (c) 2014 Arduino LLC
 */
 
 

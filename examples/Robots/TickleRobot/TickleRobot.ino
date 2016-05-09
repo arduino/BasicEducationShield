@@ -5,7 +5,7 @@
     Come to think of it, that doesn't sound very regular at all. 
     Tickle the robot on its heart and it will start wiggle like crazy. 
     
-    (c) 2013 Arduino Verkstad
+    (c) 2013 Arduino LLC
 */
 
 #include <BasicEducationShield.h>

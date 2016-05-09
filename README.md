@@ -3,7 +3,7 @@ Basic Education Shield
 
 Basic Education Shield library
 
-This is an educational project carried by Arduino Verkstad in Malmo. It is a collection of exercises commissioned by the Center of Resources for Education at Castilla La Mancha to be tried out in the classrooms during the Srping 2013.
+This is an educational project carried by Arduino LLC. It is a collection of exercises commissioned by the Center of Resources for Education at Castilla La Mancha to be tried out in the classrooms during the Spring 2013.
 
 The content of this repository is the materials generated for a first try out with schools and includes exercises, texts, and code.
 

@@ -6,7 +6,7 @@
   by pointing a flashligt at it. (The one on your mobile 
   phone eg.) It will always turn towards the light. 
   
-  (c) 2013 Arduino Verkstad
+  (c) 2013 Arduino LLC
 */
 
 #include <BasicEducationShield.h>

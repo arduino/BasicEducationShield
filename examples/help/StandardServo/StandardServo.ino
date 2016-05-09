@@ -8,7 +8,7 @@
   microservos. Microservos behave the same as a standard servo, 
   but are slimmer in size and exert less turning power. 
   
-  (c) 2013 Arduino Verkstad
+  (c) 2013 Arduino LLC
 */
 #include <BasicEducationShield.h>
 

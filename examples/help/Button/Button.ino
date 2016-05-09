@@ -4,7 +4,7 @@
   states, either HIGH (5V) or LOW (0V). When you connect a button 
   to your Arduino board you can read these states as 1 or 0. 
   
-  (c) 2013 Arduino Verkstad
+  (c) 2013 Arduino LLC
 */
 
 #include <BasicEducationShield.h>
