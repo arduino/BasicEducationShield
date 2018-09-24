@@ -27,7 +27,7 @@ bool PiezoKnockSensor::knocked(int timeout){
 }
 
 void PiezoKnockSensor::test(){
-	int val=analogRead(A5);
+	int val=analogRead(pin);
 	Serial.println(val);
 	delay(debounceTime);
 }
